@@ -1,10 +1,12 @@
 # UVue
 
+## Core plugins
+
+TODO: Goto Usage section
+
 ## Write your own plugin
 
 TODO
-
-## API
 
 ```js
 export default {

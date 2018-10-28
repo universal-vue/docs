@@ -4,7 +4,7 @@ UVue is composed of multiple plugins to help you start with Vue SSR.
 
 ## UVue
 
-To install a plugin, write in your `uvue.config.js`:
+To use an UVue plugin, write in your `uvue.config.js`:
 
 ```js
 export default {
@@ -21,18 +21,6 @@ export default {
   ],
 };
 ```
-
-**asyncData**: Inject data from server side to page components
-`@uvue/core/plugins/asyncData`
-
-**vuex**: Method and action to populate a Vuex store
-`@uvue/core/plugins/vuex`
-
-**middlewares**: Run functions on each pages
-`@uvue/core/plugins/middlewares`
-
-**errorHandler**: Catch errors
-`@uvue/core/plugins/errorHandler`
 
 ## Server
 
@@ -52,15 +40,3 @@ export default {
   ],
 };
 ```
-
-**static**: Middleware to serve bundled files
-`@uvue/server/plugins/static`
-
-**gzip**: Middleware to compress assets
-`@uvue/server/plugins/gzip`
-
-**cookie**: Middleware to parse HTTP cookies
-`@uvue/server/plugins/cookie`
-
-**modernBuild**: Transform final HTML output to use modern builds
-`@uvue/server/plugins/modernBuild`

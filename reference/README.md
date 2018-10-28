@@ -42,3 +42,11 @@ TODO
 :::tip
 To inject another environment variables see the official [Vue CLI documentation](https://cli.vuejs.org/guide/mode-and-env.html)
 :::
+
+## Server context
+
+TODO
+
+## Server response
+
+TODO
