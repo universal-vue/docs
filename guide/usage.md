@@ -50,6 +50,8 @@ export default {
 };
 ```
 
+This method receive a [context](/reference/) as first argument.
+
 :::warning
 This method is only called on your pages components (defined in your router)
 :::
@@ -58,7 +60,7 @@ This method is only called on your pages components (defined in your router)
 
 In your `src/store.js` store file you add an action called `onHttpRequest`
 This action will be called before your application is ready. The second argument is a
-[`context` variable](/reference/). The purpose of this action is to fill your Vuex store
+[`context`](/reference/) variable. The purpose of this action is to fill your Vuex store
 on each HTTP requests and will not be not called on future client navigations.
 
 In SPA mode too this action is called before application is ready.
@@ -105,11 +107,19 @@ You can setup an `asyncData()` method on your pages components. This method will
 called before the page is created. You can the same as `fetch()` method, plus inject
 some data directly to your pages copmponents.
 
-This method receive a [context](/reference/) as first argument and you can populate your vuex store and your component data.
+This method receive a [context](/reference/) as first argument and you can populate
+your vuex store and your component data.
 
 Example:
 
-```js
+```html
+<template>
+  <div>
+    Data from asyncData: {{ foo }}
+  </div>
+</template>
+
+<script>
 export default {
   async asyncData({ store }) {
     const data = await api.get('some-data');
@@ -123,6 +133,7 @@ export default {
     };
   },
 };
+</script>
 ```
 
 :::warning
@@ -180,6 +191,8 @@ export default {
 };
 ```
 
+Each middleware will receive a [context](/reference/) as first argument.
+
 :::tip
 It's a good practice to install this plugin in first position
 :::
@@ -236,7 +249,50 @@ export default {
 
 > `@uvue/core/plugins/errorHandler`
 
-TODO
+This plugin will try to catch errors from UVue plugins. If any error is thrown during a `asyncData`, `fetch`,
+`onHttpRequest` or a middleware call, error handler will stop execution of your page and populate a store.
+Next you can do what you want with this data (catched error) and, for example, display an error page.
+
+For example in `src/App.vue`:
+
+```html
+<template>
+  <div id="app">
+    <router-view
+      v-if="!$errorHandler.error"
+    />
+    <div
+      v-else
+      class="error-page"
+    >
+      Oups, something go wrong !
+    </div>
+  </div>
+</template>
+```
+
+If you write your own UVue plugins, or a custom middleware, you can use a helper function to throw errors:
+
+```js
+// In a asyncData of a page component
+export const MyComponent = {
+  async asyncData({ error }) {
+    error('Access forbidden', 403);
+  },
+};
+
+// My custom middleware
+export const middleware = ({ error }) => {
+  error('Access forbidden', 403);
+};
+
+// My cutom plugin
+export default {
+  async routeResolve({ error }) {
+    error('Access forbidden', 403);
+  },
+};
+```
 
 ## SPA paths
 
@@ -366,4 +422,22 @@ Some good articles on it:
 
 ## Modern build
 
-TODO
+You can use modern mode of Vue CLI 3 to build lighter bundles for modern
+browsers. Just add an argument to `ssr:build` command:
+
+```bash
+npm run ssr:build -- --modern
+```
+
+Then you need to add `modernBuild` plugin to your `server.config.js` file:
+
+```js
+export default {
+  plugins: {
+    ['@uvue/server/plugins/modernBuild']
+  },
+};
+```
+
+Purpose of this plugin is to rewrite the final HTML output of your pages to
+include coorectly modern bundle and legacy bundle for old browsers.

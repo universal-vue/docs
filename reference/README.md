@@ -2,22 +2,26 @@
 
 ## Context
 
-TODO
+This context object will be passed to all your UVue plugins hooks. So, this object will
+be avalaible in your `asyncData()` method, `fetch()` method, `onHttpRequest()` action
+and in your defined middlewares.
 
-| Variable name |        Type         | Description                                                                              |
-| ------------- | :-----------------: | ---------------------------------------------------------------------------------------- |
-| `app`         |    Vue instance     | The main component of the application                                                    |
-| `router`      | Vue router instance | Router of the application. [Official docs](https://router.vuejs.org/api)                 |
-| `store`       |    Vuex instance    | Vuex store if installed. [Official docs](https://vuex.vuejs.org/api)                     |
-| `redirect`    |      Function       | Simple function to redirect to a specific page. [Docs](/reference/helpers.html#redirect) |
-| `error`       |      Function       | Simple function to display an error page: [Docs](/reference/helpers.html#throw-an-error) |
-| `url`         |       String        | URL of current page.                                                                     |
-| `req`         |   IncomingMessage   | **SSR only**                                                                             |
-| `res`         |   ServerResponse    | **SSR only**                                                                             |
+| Variable name |        Type         | Description                                                                                                  |
+| ------------- | :-----------------: | ------------------------------------------------------------------------------------------------------------ |
+| `app`         |    Vue instance     | The main component of the application (only after `beforeCreate()` hook)                                     |
+| `router`      | Vue router instance | Router of the application. [Docs](https://router.vuejs.org/api)                                              |
+| `store`       |    Vuex instance    | Vuex store if installed. [Docs](https://vuex.vuejs.org/api)                                                  |
+| `redirect`    |      Function       | Simple function to redirect to a specific page. [Docs](/reference/helpers.html#redirect)                     |
+| `error`       |      Function       | Simple function to display an error page: [Docs](/reference/helpers.html#throw-an-error)                     |
+| `url`         |       String        | URL of current page.                                                                                         |
+| `req`         |   IncomingMessage   | **SSR only** [Docs](https://nodejs.org/dist/latest-v10.x/docs/api/http.html#http_class_http_incomingmessage) |
+| `res`         |   ServerResponse    | **SSR only** [Docs](https://nodejs.org/dist/latest-v10.x/docs/api/http.html#http_class_http_serverresponse)  |
 
-## Route context
+## Route special variables
 
-TODO
+Below variables will be available in a route context (like `asyncData()`, `fetch()` method, `onHttpRequest()` action
+and in your defined middlewares). If you write your own UVue plugin, these will be avalaible in your `routeResolve()` and
+`routeError()` hooks.
 
 | Variable name |  Type  | Description                                                                                      |
 | ------------- | :----: | ------------------------------------------------------------------------------------------------ |
@@ -27,7 +31,7 @@ TODO
 
 ## Process variables
 
-TODO
+Below variables will be replaced during Webpack bundling with defined values and depends on the build context.
 
 | Variable name    | Description                                                                                 |
 | ---------------- | ------------------------------------------------------------------------------------------- |
@@ -40,13 +44,30 @@ TODO
 | `process.server` | In SSR mode only: return `true` if in server side rendering, `false` otherwise              |
 
 :::tip
-To inject another environment variables see the official [Vue CLI documentation](https://cli.vuejs.org/guide/mode-and-env.html)
+To inject environment variables see the official [Vue CLI documentation](https://cli.vuejs.org/guide/mode-and-env.html)
 :::
 
 ## Server context
 
-TODO
+This context is passed to some [server plugins hooks](/plugins/server.html)
+
+| Variable name     |      Type       | Description                                                                                                  |
+| ----------------- | :-------------: | ------------------------------------------------------------------------------------------------------------ |
+| `url`             |     String      | URL of current page.                                                                                         |
+| `req`             | IncomingMessage | **SSR only** [Docs](https://nodejs.org/dist/latest-v10.x/docs/api/http.html#http_class_http_incomingmessage) |
+| `res`             | ServerResponse  | **SSR only** [Docs](https://nodejs.org/dist/latest-v10.x/docs/api/http.html#http_class_http_serverresponse)  |
+| `redirected`      |     Boolean     | Indicate if current request is redirected                                                                    |
+| `statusCode`      |     Number      | HTTP status code to send to client from your Vue application                                                 |
+| `bodyAdd`         |     String      | String to add before `</body>`                                                                               |
+| `headAdd`         |     String      | String to add before `</head>`                                                                               |
+| `data.state`      |     String      | Data from server side for Vuex store                                                                         |
+| `data.components` |     String      | Data from server side for page components                                                                    |
 
 ## Server response
 
-TODO
+This object is passed to some [server plugins hooks](/plugins/server.html)
+
+| Variable name |  Type  | Description                        |
+| ------------- | :----: | ---------------------------------- |
+| `body`        | String | HTML to send to client             |
+| `status`      | Number | HTTP status code to send to client |

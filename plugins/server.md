@@ -73,10 +73,6 @@ export default {
 
 More informations here: [https://www.npmjs.com/package/serve-static](https://www.npmjs.com/package/serve-static)
 
-## Modern mode
-
-TODO
-
 ## Write your own plugin
 
 A plugin is just an object with defined methods to act on different hooks:
@@ -105,7 +101,7 @@ export default {
 
   // HTML is ready to be sent to client
   async rendered(response, context, app) {
-    // You can alter response conten before sending it
+    // You can alter response content before sending it
   },
 
   // Act when something go wrong during SSR rendering

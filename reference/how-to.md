@@ -1,8 +1,12 @@
 # How to
 
+:::warning
+Work in progress!
+:::
+
 TODO: Example repository
 
-## Display a page for error handler
+## Display an error page with error handler
 
 ## Customize server error page
 
