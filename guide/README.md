@@ -46,8 +46,6 @@ npm run ssr:fix
 The `serve` and `build` commands are still available to run your application in SPA mode
 :::
 
-## Why ?
-
 ## Alternatives
 
 ### Live SSR

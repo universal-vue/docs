@@ -86,7 +86,7 @@ This method is only called on a real HTTP request to show current page. Future n
 :::
 
 :::danger
-For your Vuex modules, don't forget to init state with a function:
+For your Vuex modules, don't forget to init state with a factory function:
 
 ```js
 export default {
@@ -108,31 +108,29 @@ called before the page is created. You can the same as `fetch()` method, plus in
 some data directly to your pages copmponents.
 
 This method receive a [context](/reference/) as first argument and you can populate
-your vuex store and your component data.
+your Vuex store and your component data.
 
 Example:
 
 ```html
 <template>
-  <div>
-    Data from asyncData: {{ foo }}
-  </div>
+  <div>Data from asyncData: {{ foo }}</div>
 </template>
 
 <script>
-export default {
-  async asyncData({ store }) {
-    const data = await api.get('some-data');
+  export default {
+    async asyncData({ store }) {
+      const data = await api.get('some-data');
 
-    // Of course you can populate your Vuex store
-    store.commit('SET_DATA', data.vuex);
+      // Of course you can populate your Vuex store
+      store.commit('SET_DATA', data.vuex);
 
-    // And send data to current component
-    return {
-      foo: data.foo,
-    };
-  },
-};
+      // And send data to current component
+      return {
+        foo: data.foo,
+      };
+    },
+  };
 </script>
 ```
 
@@ -174,7 +172,7 @@ export default {
 };
 ```
 
-You can also apply global middlewares called on each routes:
+You can also apply global middlewares called on all routes:
 
 In `uvue.config.js`
 
@@ -440,4 +438,4 @@ export default {
 ```
 
 Purpose of this plugin is to rewrite the final HTML output of your pages to
-include coorectly modern bundle and legacy bundle for old browsers.
+include correctly modern bundle and legacy bundle for old browsers.

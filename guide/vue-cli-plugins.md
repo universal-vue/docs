@@ -31,6 +31,8 @@ For most part you don't have to do anything. If you want to use
 to include `@uvue/core/vueclass` in your `src/main.ts`. This file will register UVue plugins hooks and
 will import automatically definitions to use UVue correctly.
 
+[See here for more informations](/reference/helpers.html#vue-class-components)
+
 ## i18n
 
 Like router and vuex plugins, this plugin need to export a factory function.
