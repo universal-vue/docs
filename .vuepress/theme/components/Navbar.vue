@@ -66,7 +66,7 @@ export default {
     return {
       linksWrapMaxWidth: null,
       afterLinks: [
-        { text: 'Chat', link: 'https://discord.gg/M9wSrW', type: 'link', items: [] },
+        { text: 'Chat', link: 'https://discord.gg/3ZZBmFs', type: 'link', items: [] },
         { text: 'Github', link: 'https://github.com/universal-vue', type: 'link', items: [] },
       ],
     };

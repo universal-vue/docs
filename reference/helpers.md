@@ -54,6 +54,65 @@ export default {
 
 :::
 
-## Vue Class components
+## Vue Class Components
 
-TODO
+To use Vue Class components in your application you need to include `@uvue/core/vueclass`
+in your `src/main.ts` file:
+
+```ts
+import '@uvue/core/vueclass';
+```
+
+With that, Vue router and UVue plugins hooks will be correctly registered:
+
+```ts
+import Component from 'vue-class-component';
+
+@Component
+export default class PageComponent extends Vue {
+  middlewares = [
+    // ...
+  ];
+
+  async asyncData() {
+    // ...
+  }
+
+  async fetch() {
+    // ...
+  }
+}
+```
+
+This file will import some important types definition too.
+
+### Vue meta
+
+If you use `vue-meta` package you can register its hook too:
+
+```ts
+import Vue from 'vue';
+import VueMeta from 'vue-meta';
+import Component from 'vue-class-component';
+
+Vue.use(VueMeta, {
+  keyName: 'head',
+});
+
+Component.registerHooks(['head']);
+```
+
+And then use it in your page components:
+
+```ts
+import Component from 'vue-class-component';
+
+@Component
+export default class PageComponent extends Vue {
+  head() {
+    return {
+      title: 'Hello world!',
+    };
+  }
+}
+```

@@ -26,7 +26,10 @@ if (process.env.NODE_ENV === 'production' && process.client) {
 
 ## TypeScript
 
-TODO
+For most part you don't have to do anything. If you want to use
+[Vue Class Components](https://github.com/vuejs/vue-class-component) you have
+to include `@uvue/core/vueclass` in your `src/main.ts`. This file will register UVue plugins hooks and
+will import automatically definitions to use UVue correctly.
 
 ## i18n
 

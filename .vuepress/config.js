@@ -13,7 +13,7 @@ module.exports = {
       '/guide/': ['', 'usage', 'css', 'vue-cli-plugins', 'server', 'deploy'],
       '/plugins/': ['', 'uvue', 'server'],
       '/devtools/': [''],
-      '/reference/': ['', 'config', 'server-config', 'how-to'],
+      '/reference/': ['', 'helpers', 'config', 'server-config', 'how-to'],
     },
   },
 };

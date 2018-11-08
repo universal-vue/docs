@@ -7,54 +7,106 @@ To install it:
 npm install -D @uvue/devtools
 ```
 
-TODO: help output
+**Help output**:
+
+```bash
+uvd <cmd> [args]
+
+Commands:
+  uvd doctor                Start a node Clinic Doctor against server
+  uvd flame                 Start a node Clinic Flame against server
+  uvd bubbleprof            Start a node Clinic BubbleProf against server
+  uvd ndb                   Start server with ndb
+  uvd benchmark <scenario>  Run a benchmark scenario
+  uvd clean                 Clean node clinic reports
+```
 
 ## ndb
+
+With this tool you can easly debug your server side.
 
 Usage:
 
 ```bash
-npx uvue-devtools ndb
-# or
-yarn uvue-devtools ndb
+npx uvd ndb
+
+Start server with ndb
+
+Options:
+  -h, --host  Set listen host             [string] [default: "localhost"]
+  -p, --port  Set listen port                    [number] [default: 7357]
+  --prod      Run server in production mode                     [boolean]
 ```
 
-TODO: screenshot & description
-
-## Node clinic
-
-**Doctor**
-
-```bash
-npx uvue-devtools doctor
-# or
-yarn uvue-devtools doctor
-```
-
-**Flame**
-
-```bash
-npx uvue-devtools flame
-# or
-yarn uvue-devtools flame
-```
-
-**Bubbleprof**
-
-```bash
-npx uvue-devtools bubbleprof
-# or
-yarn uvue-devtools bubbleprof
-```
-
-TODO: screenshot & description
+![ndb](./img/ndb.png)
 
 ## Autocannon / Benchmark
 
+This command will start a scenario and profile performance of your app during it.
+
 ```bash
-npx uvue-devtools benchmark scenario.yml
-# or
-yarn uvue-devtools benchmark scenario.yml
+npx uvd benchmark scenario.yml
+
+Run a benchmark scenario
+
+Positionals:
+  scenario  Path of a scenario YAML file              [string] [required]
+
+Options:
+  -h, --host  Set listen host             [string] [default: "localhost"]
+  -p, --port  Set listen port                    [number] [default: 7357]
+
 ```
 
-TODO: screenshot & description
+![autocannon benchmark](./img/benchmark.png)
+
+You can see examples of scenario here: TODO
+
+## Node clinic
+
+Node Clinic is the best tool to see if you have memory leaks or too high event loop delays.
+
+### Doctor
+
+```bash
+npx uvd doctor
+
+Start a node Clinic Doctor against server
+
+Options:
+  -h, --host      Set listen host         [string] [default: "localhost"]
+  -p, --port      Set listen port                [number] [default: 7357]
+  -s, --scenario  Path to a scenario file                        [string]
+```
+
+![doctor](./img/doctor.png)
+
+### Flame
+
+```bash
+npx uvd flame
+
+Start a node Clinic Flame against server
+
+Options:
+  -h, --host      Set listen host         [string] [default: "localhost"]
+  -p, --port      Set listen port                [number] [default: 7357]
+  -s, --scenario  Path to a scenario file                        [string]
+```
+
+![flame](./img/flame.png)
+
+### Bubbleprof
+
+```bash
+npx uvd bubbleprof
+
+Start a node Clinic BubbleProf against server
+
+Options:
+  -h, --host      Set listen host         [string] [default: "localhost"]
+  -p, --port      Set listen port                [number] [default: 7357]
+  -s, --scenario  Path to a scenario file                        [string]
+```
+
+![bubbleprof](./img/bubbleprof.png)
