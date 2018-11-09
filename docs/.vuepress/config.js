@@ -1,6 +1,7 @@
 module.exports = {
   title: 'UVue',
   description: 'Build universal Vue applications with ease',
+  base: '/docs/',
   themeConfig: {
     logo: '/logo.png',
     nav: [
