@@ -31,7 +31,10 @@ In this case `@uvue/server/plugins/static` and `@uvue/server/plugins/gzip` can
 be removed from your configuration
 :::
 
-Links to original files: TODO
+Links to original files:
+
+- [Dockerfile](https://github.com/universal-vue/uvue/blob/master/packages/%40uvue/vue-cli-plugin-ssr/generator/templates/docker/Dockerfile)
+- [docker-compose.yml](https://github.com/universal-vue/uvue/blob/master/packages/%40uvue/vue-cli-plugin-ssr/generator/templates/docker-nginx/docker-compose.yml)
 
 ## Heroku
 

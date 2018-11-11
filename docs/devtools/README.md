@@ -60,7 +60,10 @@ Options:
 
 ![autocannon benchmark](./img/benchmark.png)
 
-You can see examples of scenario here: TODO
+You can see examples of scenario here:
+
+- [Benchmark](https://github.com/universal-vue/uvue/blob/master/tests/projects/profiling/fixtures/benchmark.yml)
+- [To run with Node clinic](https://github.com/universal-vue/uvue/blob/master/tests/projects/profiling/fixtures/doctor.yml)
 
 ## Node clinic
 

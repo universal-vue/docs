@@ -20,9 +20,17 @@ to do some actions during SSR processes.
 
 ```js
 export default {
+  // When plugin is installed to the stack
+  install(options) {
+    // options will be data sent in uvue.config.js
+    // ...
+  },
+
   // Befoe new Vue is called: good place to define some routes or vuex modules
-  beforeCreate(context) {
+  beforeCreate(context, inject, vueOptions) {
     // Warning: context.app is not already defined here!
+    // inject(key, value) will inject defined key with its value to new Vue()
+    // vueOptions will be data injected to new Vue(), useful if you want to get some injected plugins
     //...
   },
 
@@ -53,7 +61,7 @@ export default {
 };
 ```
 
-In each method you can use `this.$options` to get current plugin options defined in `uvue.config.js`
+Please take a look to [UVue core plugins](https://github.com/universal-vue/uvue/tree/master/packages/%40uvue/core/plugins) already done
 
 :::warning
 Use `this` with precaution: data in it will ba shared across all

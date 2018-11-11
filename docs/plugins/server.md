@@ -80,8 +80,8 @@ A plugin is just an object with defined methods to act on different hooks:
 ```js
 export default {
   // Act on server bootstrap: good place to define some server middlewares
-  install(app) {
-    app.use('/path', myMiddleware(this.$options));
+  install(app, options) {
+    app.use('/path', myMiddleware(options));
   },
 
   // Act before server is started
@@ -116,5 +116,4 @@ export default {
 };
 ```
 
-You can access to options defined options in `server.config.js` via `this.$options`
-variable in any methods.
+Please take a look to [UVue server plugins](https://github.com/universal-vue/uvue/tree/master/packages/%40uvue/server/plugins) already done
