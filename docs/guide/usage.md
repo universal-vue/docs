@@ -86,7 +86,7 @@ This method is only called on a real HTTP request to show current page. Future n
 :::
 
 :::danger
-For your Vuex modules, don't forget to init state with a factory function:
+For your Vuex main store or modules, don't forget to initialize state with a factory function:
 
 ```js
 export default {

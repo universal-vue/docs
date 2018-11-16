@@ -2,6 +2,12 @@
 
 > Build universal Vue applications with ease
 
+- [Github repository](https://github.com/universal-vue/uvue)
+- [Live demo](http://uvue.yabab.net)
+- [Live demo source code](https://github.com/universal-vue/examples)
+- [CodeSandbox template](https://codesandbox.io/s/github/universal-vue/uvue-codesandbox)
+- [Discord chat](https://discord.gg/3ZZBmFs)
+
 ## Getting started
 
 **Install**
