@@ -76,6 +76,20 @@ export default {
 };
 ```
 
+:::tip
+You can watch for files changes and reload automatically your server if changes occurs.
+
+In `server.config.js`:
+
+```js
+export default {
+  watch: ['src/server/**/*.js'],
+};
+```
+
+You can also type `rs` in your terminal to reload the server.
+:::
+
 See more informations:
 
 - [Dev middleware options](https://github.com/webpack/webpack-dev-middleware#options)
