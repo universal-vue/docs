@@ -424,7 +424,7 @@ You can use modern mode of Vue CLI 3 to build lighter bundles for modern
 browsers. Just add an argument to `ssr:build` command:
 
 ```bash
-npm run ssr:build -- --modern
+npm run ssr:build --modern
 ```
 
 Then you need to add `modernBuild` plugin to your `server.config.js` file:
