@@ -4,6 +4,10 @@ module.exports = {
   base: '/docs/',
   themeConfig: {
     logo: '/logo.png',
+    algolia: {
+      apiKey: 'a03de8357efd38f3cc69d26ccde94ac3',
+      indexName: 'universal-vue'
+    },
     nav: [
       { text: 'Guide', link: '/guide/' },
       { text: 'Plugins', link: '/plugins/' },
