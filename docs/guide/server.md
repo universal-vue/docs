@@ -103,7 +103,7 @@ HTTP requests and send responses to clients, but you can change this very easly.
 
 ### Use Express
 
-Firts install dependency:
+First install dependency:
 
 ```bash
 npm install express
@@ -119,27 +119,9 @@ export default {
 };
 ```
 
-### Use Fastify
-
-Firts install dependency:
-
-```bash
-npm install fastify
-```
-
-Then setup your server configuration to use `FastifyAdapter`, in `server.config.js`:
-
-```js
-import { FastifyAdapter } from '@uvue/server/lib/adapters/FastifyAdapter';
-
-export default {
-  adapter: FastifyAdapter,
-};
-```
-
 ### Use Koa
 
-Firts install dependencies:
+First install dependencies:
 
 ```bash
 npm install koa koa-mount koa-static koa-compress
