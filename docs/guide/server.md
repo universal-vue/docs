@@ -94,3 +94,68 @@ See more informations:
 
 - [Dev middleware options](https://github.com/webpack/webpack-dev-middleware#options)
 - [Hot middleware options](https://github.com/webpack-contrib/webpack-hot-middleware#documentation)
+
+
+## Adapters
+
+By default UVue use a [connect](https://github.com/senchalabs/connect#readme) instance to process 
+HTTP requests and send responses to clients, but you can change this very easly.
+
+### Use Express
+
+Firts install dependency:
+
+```bash
+npm install express
+```
+
+Then setup your server configuration to use `ExpressAdapter`, in `server.config.js`:
+
+```js
+import { ExpressAdapter } from '@uvue/server/lib/adapters/ExpressAdapter';
+
+export default {
+  adapter: ExpressAdapter,
+};
+```
+
+### Use Fastify
+
+Firts install dependency:
+
+```bash
+npm install fastify
+```
+
+Then setup your server configuration to use `FastifyAdapter`, in `server.config.js`:
+
+```js
+import { FastifyAdapter } from '@uvue/server/lib/adapters/FastifyAdapter';
+
+export default {
+  adapter: FastifyAdapter,
+};
+```
+
+### Use Koa
+
+Firts install dependencies:
+
+```bash
+npm install koa koa-mount koa-static koa-compress
+npm install -D koa-webpack # For ssr:serve command
+```
+
+Then setup your server configuration to use `KoaAdapter`, in `server.config.js`:
+
+```js
+import { KoaAdapter } from '@uvue/server/lib/adapters/KoaAdapter';
+
+export default {
+  adapter: KoaAdapter,
+};
+```
+
+:::tip
+You don't need to use [cookieParser](/plugins/server#cookie) plugin because Koa already have one
+:::
