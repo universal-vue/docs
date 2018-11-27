@@ -73,6 +73,36 @@ export default {
 
 More informations here: [https://www.npmjs.com/package/serve-static](https://www.npmjs.com/package/serve-static)
 
+## Server error page
+
+This plugin will display an error page in case of server error. In development mode, [Youch]() is used
+to display error. In production mode a simple page is displayed and you can customize it: just indicate a 
+path to a HTML file in the plugin configuration:
+
+```js
+export default {
+  plugins: [
+    [
+      '@uvue/server/plugins/serverError',
+      {
+        path: path.join(__dirname, 'my-custom-error-page.html'), // This path need to be absolute
+      },
+    ],
+  ],
+};
+```
+
+## Modern mode
+
+Simple plugin to handle modern and legacy bundles. You just have to install it and the plugin
+do all the job !
+
+```js
+export default {
+  plugins: ['@uvue/server/plugins/modernMode'],
+};
+```
+
 ## Write your own plugin
 
 A plugin is just an object with defined methods to act on different hooks:
