@@ -243,6 +243,29 @@ export default {
 
 [Official docs](https://github.com/declandewet/vue-meta)
 
+:::tip
+To use with TypeScript, you will need to setup types definitions, in `src/vue-shims.d.ts`:
+
+```ts
+import { MetaInfo } from 'vue-meta';
+
+/**
+ * Vue meta
+ */
+declare module 'vue/types/vue' {
+  interface Vue {
+    metaInfo?: MetaInfo | (() => MetaInfo);
+  }
+}
+
+declare module 'vue/types/options' {
+  interface ComponentOptions<V extends Vue> {
+    metaInfo?: MetaInfo | (() => MetaInfo);
+  }
+}
+```
+:::
+
 ## Error handler
 
 > `@uvue/core/plugins/errorHandler`
