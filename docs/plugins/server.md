@@ -114,11 +114,6 @@ export default {
     app.use('/path', myMiddleware(options));
   },
 
-  // Act before server is started
-  async beforeStart(app) {
-    // ...
-  },
-
   // Do an action before page will be rendered by Vue SSR
   async beforeRender(context, app) {
     // ...

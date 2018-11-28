@@ -112,12 +112,38 @@ npm install express
 Then setup your server configuration to use `ExpressAdapter`, in `server.config.js`:
 
 ```js
-import { ExpressAdapter } from '@uvue/server/lib/adapters/ExpressAdapter';
+import { ExpressAdapter } from '@uvue/server';
 
 export default {
   adapter: ExpressAdapter,
 };
 ```
+
+### Use Fastify
+
+First install dependency:
+
+```bash
+npm install fastify
+```
+
+Then setup your server configuration to use `FastifyAdapter`, in `server.config.js`:
+
+```js
+import { FastifyAdapter } from '@uvue/server';
+
+export default {
+  adapter: FastifyAdapter,
+};
+```
+
+:::tip
+`request` and `reply` objects from Fastify framework will be injected to the [`context`](/reference/#context) object.
+:::
+
+:::tip
+Current [live demo](http://uvue.yabab.net/) use fastify, you can check source code here: https://github.com/universal-vue/examples
+:::
 
 ### Use Koa
 
@@ -131,7 +157,7 @@ npm install -D koa-webpack # For ssr:serve command
 Then setup your server configuration to use `KoaAdapter`, in `server.config.js`:
 
 ```js
-import { KoaAdapter } from '@uvue/server/lib/adapters/KoaAdapter';
+import { KoaAdapter } from '@uvue/server';
 
 export default {
   adapter: KoaAdapter,
@@ -139,5 +165,5 @@ export default {
 ```
 
 :::tip
-You don't need to use [cookieParser](/plugins/server#cookie) plugin because Koa already have one
+`ctx` object from Koa framework will be injected to the [`context`](/reference/#context) object
 :::
