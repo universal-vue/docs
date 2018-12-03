@@ -172,6 +172,24 @@ export default {
 };
 ```
 
+Or you can define middlewares via Routes metas object:
+
+```js
+export default () => {
+  return new Router({
+    routes: [
+      {
+        path: '/some-path',
+        component: () => import('./MyComponent.vue'),
+        meta: {
+          middlewares: [checkUser],
+        },
+      },
+    ],
+  });
+};
+```
+
 You can also apply global middlewares called on all routes:
 
 In `uvue.config.js`
@@ -192,7 +210,23 @@ export default {
 Each middleware will receive a [context](/reference/) as first argument.
 
 :::tip
-It's a good practice to install this plugin in first position
+It's a good practice to install this plugin in first position in your `uvue.config.js` file
+:::
+
+:::tip
+Others UVue plugins ca define global middlewares too:
+
+```js
+// some-plugin.js
+export default {
+  middlewares() {
+    return: [
+      globalMiddleware
+    ];
+  },
+};
+```
+
 :::
 
 ## Metas
@@ -264,6 +298,7 @@ declare module 'vue/types/options' {
   }
 }
 ```
+
 :::
 
 ## Error handler
