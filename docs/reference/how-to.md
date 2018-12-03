@@ -33,9 +33,11 @@ in [universal-vue/examples](https://github.com/universal-vue/examples) repositor
 ## Run animations when route change
 
 **With CSS**
+
 - [Vue Router official documentation](https://router.vuejs.org/guide/advanced/transitions.html)
 
 **With JS**
+
 - [Create some animations](https://github.com/universal-vue/examples/blob/master/src/effects.js#L1-L63)
 - [Install them on your pages](https://github.com/universal-vue/examples/blob/master/src/views/AsyncData.vue#L12-L15)
 

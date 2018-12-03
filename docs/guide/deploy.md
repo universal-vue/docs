@@ -1,9 +1,5 @@
 # Deployment
 
-:::warning
-Work in progress!
-:::
-
 ## Docker
 
 UVue can be installed with pre-made docker files to easly deploy your application.
@@ -72,9 +68,9 @@ git push heroku master
 
 ## Now v2
 
-:::warn
+:::warning
 Actually this method only works with **NPM** and not with **Yarn**. So, if you use **Yarn**,
-you need to remove `yarn.lock` and do a **NPM** install to have a `package-json.lock` file.
+you need to remove `yarn.lock` and do a **NPM** install to have a `package-lock.json` file.
 :::
 
 First you need to write some configuration files:
