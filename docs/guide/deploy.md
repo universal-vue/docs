@@ -38,8 +38,108 @@ Links to original files:
 
 ## Heroku
 
-TODO
+First you need to create a Heroku app and ask Heroku to keep dev dependencies after installation
+of your project:
 
-## Now
+```bash
+heroku create
+heroku config:set NPM_CONFIG_PRODUCTION=false YARN_PRODUCTION=false
+```
 
-TODO
+Then you need to indicate that your project need to do a webpack build before starting it,
+in your `package.json`:
+
+```json
+{
+  "scripts": {
+    "heroku-postbuild": "vue-cli-service ssr:build"
+  }
+}
+```
+
+Last step of configuration, create a `Procfile` in the root folder of project, to indicate
+wich command need to called to start server:
+
+```
+web: npm run ssr:start
+```
+
+Finally to start your Heroku dyno, just commit theses changes and push to `heroku master`:
+
+```bash
+git push heroku master
+```
+
+## Now v2
+
+:::warn
+Actually this method only works with **NPM** and not with **Yarn**. So, if you use **Yarn**,
+you need to remove `yarn.lock` and do a **NPM** install to have a `package-json.lock` file.
+:::
+
+First you need to write some configuration files:
+
+`now.js`: It's just a file that will be executed to start the SSR server on Now
+
+```js
+require('@uvue/server/start');
+```
+
+`.nowignore`: Just to not upload useless files to Now:
+
+```
+/node_modules
+/tests
+```
+
+`now.json`: Contains Now configuration parameters:
+
+```json
+{
+  "version": 2,
+  "name": "project-name",
+  "builds": [
+    {
+      "src": "now.js",
+      "use": "@now/node-server",
+      "config": {
+        "bundle": false,
+        "maxLambdaSize": "50mb"
+      }
+    }
+  ],
+  "routes": [
+    {
+      "src": "/.*",
+      "dest": "now.js"
+    }
+  ]
+}
+```
+
+Importants parts are:
+
+- `builds`: Indicate which Now builder to use, here we use `@now/node-server` to create a
+  HTTP bridge between lambad function and our SSR server. `"bundle": false` indicate the project will not
+  be bundled with `ncc` compiler, cause it's not working with UVue at the moment.
+- `routes`: Ask Now to redirects all incoming requests to our SSR server.
+
+Finally we need to add a build script to our `package.json`:
+
+```json
+{
+  "scripts": {
+    "now-build": "vue-cli-service ssr:build && npm prune --production"
+  }
+}
+```
+
+:::tip
+If you want a faster build you can move some dev dependencies (like Cypress) to peer dependencies.
+:::
+
+Then you can deploy to Now:
+
+```bash
+now
+```
