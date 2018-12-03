@@ -49,6 +49,11 @@ export default {
     //...
   },
 
+  // When a error is thrown during plugins hooks
+  catchError(error, context) {
+    //...
+  },
+
   // Before app is mounted (client-side) or ready to be sent to client (server-side)
   async beforeReady(context) {
     //...

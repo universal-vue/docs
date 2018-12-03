@@ -28,7 +28,7 @@ export default {
 ## Throw an error
 
 :::warning
-This needs `@uvue/core/plugins/errorHandler` installed on your peoject
+This needs `@uvue/core/plugins/errorHandler` plugin installed on your project
 :::
 
 A simple function to throw an error

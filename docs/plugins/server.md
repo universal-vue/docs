@@ -76,7 +76,7 @@ More informations here: [https://www.npmjs.com/package/serve-static](https://www
 ## Server error page
 
 This plugin will display an error page in case of server error. In development mode, [Youch]() is used
-to display error. In production mode a simple page is displayed and you can customize it: just indicate a 
+to display error. In production mode a simple page is displayed and you can customize it: just indicate a
 path to a HTML file in the plugin configuration:
 
 ```js
@@ -110,6 +110,7 @@ A plugin is just an object with defined methods to act on different hooks:
 ```js
 export default {
   // Act on server bootstrap: good place to define some server middlewares
+  // and use methods from current used HTTP framework
   install(app, options) {
     app.use('/path', myMiddleware(options));
   },

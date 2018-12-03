@@ -83,7 +83,8 @@ In `server.config.js`:
 
 ```js
 export default {
-  watch: ['src/server/**/*.js'],
+  watch: ['server.config.js', 'src/server/**/*.js'],
+  watchIgnore: ['node_modules'],
 };
 ```
 
@@ -95,10 +96,9 @@ See more informations:
 - [Dev middleware options](https://github.com/webpack/webpack-dev-middleware#options)
 - [Hot middleware options](https://github.com/webpack-contrib/webpack-hot-middleware#documentation)
 
-
 ## Adapters
 
-By default UVue use a [connect](https://github.com/senchalabs/connect#readme) instance to process 
+By default UVue use a [connect](https://github.com/senchalabs/connect#readme) instance to process
 HTTP requests and send responses to clients, but you can change this very easly.
 
 ### Use Express
@@ -142,7 +142,8 @@ export default {
 :::
 
 :::tip
-Current [live demo](http://uvue.yabab.net/) use fastify, you can check source code here: https://github.com/universal-vue/examples
+Current [live demo](http://uvue.yabab.net/) use fastify, you can check source code here:
+[universal-vue/examples](https://github.com/universal-vue/examples)
 :::
 
 ### Use Koa
