@@ -86,7 +86,8 @@ This method is only called on a real HTTP request to show current page. Future n
 :::
 
 :::danger
-For your Vuex main store or modules, don't forget to initialize state with a factory function:
+For your Vuex main store or modules, don't forget to initialize state with a factory function.
+:::
 
 ```js
 export default {
@@ -99,18 +100,19 @@ export default {
 
 :::
 
-## Async data
+## Async data and fetch
 
 > `@uvue/core/plugins/asyncData`
 
-You can setup an `asyncData()` method on your pages components. This method will be
-called before the page is created. You can the same as `fetch()` method, plus inject
-some data directly to your pages copmponents.
+You can setup an `asyncData()` method on your view components. This method will be
+called before the page is created. This method receives a [context](/reference/) as first argument and you can populate
+your Vuex store and your view's data.
 
-This method receive a [context](/reference/) as first argument and you can populate
-your Vuex store and your component data.
+You can do the same in a component's `fetch()` method, minus the ability to inject data. It is only used to populate your store.
 
-Example:
+Examples:
+
+*src/views/Example.vue*
 
 ```html
 <template>
@@ -135,8 +137,27 @@ Example:
 ```
 
 :::warning
-You cannot use `this` in this method, because the component is not created yet. This method is only
-called on your pages components (defined in your router)
+The asyncData method is only called on your view components (defined in your router).
+:::
+
+*src/components/Example.vue*
+
+```html
+<template>
+<div>Data from fetch: {{ $store.state.foo }}</div>
+</template>
+
+<script>
+export default {
+  async fetch({ store }) {
+    await store.dispatch('GET_DATA');
+  },
+};
+</script>
+```
+
+:::danger
+You cannot use `this` in either of these methods, because the component is not created yet.
 :::
 
 ## Middlewares
