@@ -29,8 +29,6 @@ export default {
   // Befoe new Vue is called: good place to define some routes or vuex modules
   beforeCreate(context, inject, vueOptions) {
     // Warning: context.app is not already defined here!
-    // inject(key, value) will inject defined key with its value to new Vue()
-    // vueOptions will be data injected to new Vue(), useful if you want to get some injected plugins
     //...
   },
 
