@@ -179,21 +179,7 @@ export default async ({ store, redirect }) => {
 };
 ```
 
-In `src/views/ProtectedPage.vue`
-
-```js
-import checkUser from '@/some/middleware';
-
-export default {
-  middlewares: [checkUser],
-
-  async asyncData() {
-    // ... fetch data from protected API route
-  },
-};
-```
-
-Or you can define middlewares via Routes metas object:
+You can declare middlewares via Routes metas object:
 
 ```js
 export default () => {
@@ -229,10 +215,6 @@ export default {
 ```
 
 Each middleware will receive a [context](/reference/) as first argument.
-
-:::tip
-It's a good practice to install this plugin in first position in your `uvue.config.js` file
-:::
 
 :::tip
 Others UVue plugins ca define global middlewares too:
