@@ -278,6 +278,23 @@ export default {
 };
 ```
 
+If you want to assign a metaInfo dynamicly or by user input you have to define it as a function return:
+
+```js
+export default {
+  data() {
+    return {
+      variable: "test"
+    }
+  },
+  metaInfo() {
+    return {
+      title: this.variable
+    }
+  },
+};
+```
+
 [Official docs](https://github.com/declandewet/vue-meta)
 
 :::tip
@@ -500,3 +517,4 @@ export default {
 
 Purpose of this plugin is to rewrite the final HTML output of your pages to
 include correctly modern bundle and legacy bundle for old browsers.
+
