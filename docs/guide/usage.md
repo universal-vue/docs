@@ -278,7 +278,7 @@ export default {
 };
 ```
 
-If you want to assign a metaInfo dynamicly or by user input you have to define it as a function return:
+If you want to assign a metaInfo dynamically or by user input you have to define it as a function return:
 
 ```js
 export default {
