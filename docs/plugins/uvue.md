@@ -26,7 +26,7 @@ export default {
     // ...
   },
 
-  // Befoe new Vue is called: good place to define some routes or vuex modules
+  // Before new Vue is called: good place to define some routes or vuex modules
   beforeCreate(context, inject, vueOptions) {
     // Warning: context.app is not already defined here!
     //...
