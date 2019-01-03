@@ -5,6 +5,16 @@ Here is the full options of `server.config.js` file
 ```js
 export default {
   /**
+   * Indicate where bundle files are located
+   */
+  distPath: 'dist',
+
+  /**
+   * Adapter to use for server (default: ConnectAdapter)
+   */
+  adapter: null,
+
+  /**
    * Define server plugins
    */
   plugins: [
@@ -34,7 +44,10 @@ export default {
   /**
    * Dev server options
    */
-  devServer: {},
+  devServer: {
+    middleware: {},
+    hot: {},
+  },
 
   /**
    * Vue SSR renderer otions
@@ -45,5 +58,20 @@ export default {
     shoudPrefect() {},
     shoudPreload() {},
   },
+
+  /**
+   * Configuration for static generation
+   */
+  generate: {
+    paths: [],
+    scanRouter: true,
+    params: {},
+  },
+
+  /**
+   * For dev only: watch for files changes and reboot server
+   */
+  watch: ['server.config.js'],
+  watchIgnore: ['dist/**/*'],
 };
 ```
