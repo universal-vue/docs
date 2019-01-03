@@ -5,13 +5,57 @@ Here is a quick presentation of core UVue plugins. They are described in
 
 ## Core plugins
 
-- [Async Data](/guide/usage.html#async-data): Useful to fetch some data from an API and inject it
-  to a Vuex store or directly to current page component.
-- [Vuex](/guide/usage.html#vuex): Same as asyncData but only for Vuex. This plugin will add a global
-  action to act on each HTTP request.
-- [Middlewares](/guide/usage.html#middlewares): To perform checks before a route is rendered.
-- [Error handler](/guide/usage.html#error-handler): To catch errors from plugins and display an error
-  page.
+### [Async Data](/guide/usage.html#async-data)
+
+Useful to fetch some data from an API and inject it to a Vuex store or directly to current page component.
+
+### [Vuex](/guide/usage.html#vuex)
+
+Same as asyncData but only for Vuex. This plugin will add a global action to act on each HTTP request.
+
+Possible options:
+
+```js
+export default {
+  plugins: [
+    [
+      '@uvue/plugins/vuex',
+      {
+        // Enable or disable `fetch()` methods on page components
+        fetch: false,
+
+        // Enable or diable `onHttpRequest()` action on your main Vuex store
+        onHttpRequest: true,
+      },
+    ],
+  ],
+};
+```
+
+### [Middlewares](/guide/usage.html#middlewares)
+
+To perform checks before a route is rendered.
+
+Possible options:
+
+```js
+export default {
+  plugins: [
+    [
+      '@uvue/plugins/middlewares',
+      {
+        // You can define global middlewares (for each routes) here
+        middlewares: [],
+      },
+    ],
+  ],
+};
+```
+
+### [Error handler](/guide/usage.html#error-handler)
+
+To catch errors from plugins and display an error
+page.
 
 ## Write your own plugin
 
