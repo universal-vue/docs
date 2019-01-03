@@ -112,7 +112,7 @@ You can do the same in a component's `fetch()` method, minus the ability to inje
 
 Examples:
 
-*src/views/Example.vue*
+_src/views/Example.vue_
 
 ```html
 <template>
@@ -140,19 +140,19 @@ Examples:
 The asyncData method is only called on your view components (defined in your router).
 :::
 
-*src/components/Example.vue*
+_src/components/Example.vue_
 
 ```html
 <template>
-<div>Data from fetch: {{ $store.state.foo }}</div>
+  <div>Data from fetch: {{ $store.state.foo }}</div>
 </template>
 
 <script>
-export default {
-  async fetch({ store }) {
-    await store.dispatch('GET_DATA');
-  },
-};
+  export default {
+    async fetch({ store }) {
+      await store.dispatch('GET_DATA');
+    },
+  };
 </script>
 ```
 
@@ -282,15 +282,18 @@ If you want to assign a metaInfo dynamically or by user input you have to define
 
 ```js
 export default {
-  data() {
+  // Fetch some data on your API
+  async asyncData() {
     return {
-      variable: "test"
-    }
+      variable: 'test',
+    };
   },
+
+  // Set metas with these infos
   metaInfo() {
     return {
-      title: this.variable
-    }
+      title: this.variable,
+    };
   },
 };
 ```
@@ -334,15 +337,8 @@ For example in `src/App.vue`:
 ```html
 <template>
   <div id="app">
-    <router-view
-      v-if="!$errorHandler.error"
-    />
-    <div
-      v-else
-      class="error-page"
-    >
-      Oups, something go wrong !
-    </div>
+    <router-view v-if="!$errorHandler.error" />
+    <div v-else class="error-page">Oups, something go wrong !</div>
   </div>
 </template>
 ```
@@ -487,9 +483,7 @@ Use vue-no-ssr package to not render a component on server side:
 ```html
 <template>
   <div>
-    <no-ssr>
-      <NotCompatibleWithSSR/>
-    </no-ssr>
+    <no-ssr> <NotCompatibleWithSSR /> </no-ssr>
   </div>
 </template>
 ```
@@ -520,4 +514,3 @@ export default {
 
 Purpose of this plugin is to rewrite the final HTML output of your pages to
 include correctly modern bundle and legacy bundle for old browsers.
-
