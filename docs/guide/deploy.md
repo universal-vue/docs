@@ -139,3 +139,17 @@ Then you can deploy to Now:
 ```bash
 now
 ```
+
+## Firebase
+
+**Docs in progress**
+
+See this sample repo: https://github.com/universal-vue/faas-deploy
+
+**Main steps:**
+
+1. [Change the configuration of server bundle](https://github.com/universal-vue/faas-deploy/blob/master/server.config.js#L2-L7)
+2. [Create UVue firebase function](https://github.com/universal-vue/faas-deploy/blob/master/functions/index.js)
+   don't forget to install @uvue/server and esm in functions folder, look at `package.json` in this folder
+3. [Change your firebase.json to call firebase function](https://github.com/universal-vue/faas-deploy/blob/master/firebase.json)
+4. [Use this shell script to build & deploy](https://github.com/universal-vue/faas-deploy/blob/master/firebase.sh)
