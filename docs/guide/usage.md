@@ -472,7 +472,10 @@ on client side:
 export default {
   imports: [
     // Import your lib automatically
-    ['some/lib/that/require/window', { ssr: false }],
+    {
+      src: 'some/lib/that/require/window',
+      ssr: false,
+    },
   ],
 };
 ```
