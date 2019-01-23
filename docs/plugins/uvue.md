@@ -70,9 +70,15 @@ export default {
     // ...
   },
 
-  // Before new Vue is called: good place to define some routes or vuex modules
-  beforeCreate(context, inject, vueOptions) {
+  // Before new Vue is called: good place to define some routes or Vuex modules
+  async beforeCreate(context, inject, vueOptions) {
     // Warning: context.app is not already defined here!
+    //...
+  },
+
+  // After root component was created
+  async created(context) {
+    // context.app is now defined and equal to your root component (e.g. App.vue)
     //...
   },
 
