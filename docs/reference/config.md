@@ -12,19 +12,8 @@ export default {
     main: './src/main.js',
 
     // Main template used for page rendering
-    template: './src/template.html',
+    template: './src/index.html',
   },
-
-  /**
-   * Imports some scripts in bundle
-   */
-  imports: [
-    // Import script on both sides
-    'some/path',
-
-    // Import script only on client side
-    ['some/path', { ssr: false }],
-  ],
 
   /**
    * Define UVue plugins
@@ -35,6 +24,17 @@ export default {
 
     // With some options
     ['some/plugin', { ...options }],
+  ],
+
+  /**
+   * Imports some scripts in bundle
+   */
+  imports: [
+    // Import script on both sides
+    'some/path',
+
+    // Import script only on client side
+    ['some/path', { ssr: false }],
   ],
 
   /**

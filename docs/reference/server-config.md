@@ -10,6 +10,11 @@ export default {
   distPath: 'dist',
 
   /**
+   * Directory for required SSR files
+   */
+  uvueDir: '.uvue',
+
+  /**
    * Adapter to use for server (default: ConnectAdapter)
    */
   adapter: null,
@@ -55,7 +60,7 @@ export default {
   renderer: {
     cache: null,
     directives: [],
-    shoudPrefect() {},
+    shoudPrefetch() {},
     shoudPreload() {},
   },
 

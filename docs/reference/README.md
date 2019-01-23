@@ -51,17 +51,17 @@ To inject environment variables see the official [Vue CLI documentation](https:/
 
 This context is passed to some [server plugins hooks](/plugins/server.html)
 
-| Variable name     |      Type       | Description                                                                                                  |
-| ----------------- | :-------------: | ------------------------------------------------------------------------------------------------------------ |
-| `url`             |     String      | URL of current page.                                                                                         |
-| `req`             | IncomingMessage | **SSR only** [Docs](https://nodejs.org/dist/latest-v10.x/docs/api/http.html#http_class_http_incomingmessage) |
-| `res`             | ServerResponse  | **SSR only** [Docs](https://nodejs.org/dist/latest-v10.x/docs/api/http.html#http_class_http_serverresponse)  |
-| `redirected`      |     Boolean     | Indicate if current request is redirected                                                                    |
-| `statusCode`      |     Number      | HTTP status code to send to client from your Vue application                                                 |
-| `bodyAdd`         |     String      | String to add before `</body>`                                                                               |
-| `headAdd`         |     String      | String to add before `</head>`                                                                               |
-| `data.state`      |     String      | Data from server side for Vuex store                                                                         |
-| `data.components` |     String      | Data from server side for page components                                                                    |
+| Variable name     |      Type       | Description                                                                                     |
+| ----------------- | :-------------: | ----------------------------------------------------------------------------------------------- |
+| `url`             |     String      | URL of current page.                                                                            |
+| `req`             | IncomingMessage | [Docs](https://nodejs.org/dist/latest-v10.x/docs/api/http.html#http_class_http_incomingmessage) |
+| `res`             | ServerResponse  | [Docs](https://nodejs.org/dist/latest-v10.x/docs/api/http.html#http_class_http_serverresponse)  |
+| `redirected`      |     Boolean     | Indicate if current request is redirected                                                       |
+| `statusCode`      |     Number      | HTTP status code to send to client from your Vue application                                    |
+| `bodyAdd`         |     String      | String to add before `</body>`                                                                  |
+| `headAdd`         |     String      | String to add before `</head>`                                                                  |
+| `data.state`      |     String      | Data from server side for Vuex store                                                            |
+| `data.components` |     String      | Data from server side for page components                                                       |
 
 ## Server response
 
