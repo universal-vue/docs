@@ -47,6 +47,8 @@ in [universal-vue/examples](https://github.com/universal-vue/examples) repositor
 - [HTTP client with Axios for your Vue app](https://github.com/universal-vue/examples/blob/master/src/plugins/httpClient.js)
 - [Login form](https://github.com/universal-vue/examples/blob/master/src/views/Profile.vue)
 - [Get private data](https://github.com/universal-vue/examples/blob/master/src/views/Private.vue)
+- [Load user to Vuex if already logged](https://github.com/universal-vue/examples/blob/master/uvue.config.js#L4-L23)
+- [Check user is logged to access to private page](https://github.com/universal-vue/examples/blob/master/src/router.js#L42-L54)
 
 ## Have same router as Nuxt
 
