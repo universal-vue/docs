@@ -12,6 +12,11 @@
 
 **Install**
 
+Before install, make sure your project use `vue-router`
+in [`history` mode](https://router.vuejs.org/guide/essentials/history-mode.html).
+
+This is needed to make SSR work correctly.
+
 ```bash
 vue add @uvue/ssr
 ```
