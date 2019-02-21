@@ -60,8 +60,8 @@ export default {
   renderer: {
     cache: null,
     directives: [],
-    shoudPrefetch() {},
-    shoudPreload() {},
+    shouldPrefetch() {},
+    shouldPreload() {},
   },
 
   /**
