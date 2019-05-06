@@ -453,7 +453,7 @@ with a dynamic import:
 
 ```js
 export default {
-  beforeMound() {
+  beforeMount() {
     import('some/lib/that/require/window').then(module => {
       // ...
     });
