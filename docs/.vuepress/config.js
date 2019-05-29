@@ -15,7 +15,7 @@ module.exports = {
       { text: 'Reference', link: '/reference/' },
     ],
     sidebar: {
-      '/guide/': ['', 'usage', 'css', 'vue-cli-plugins', 'server', 'deploy'],
+      '/guide/': ['', 'post-install', 'usage', 'css', 'vue-cli-plugins', 'server', 'deploy'],
       '/plugins/': ['', 'uvue', 'server'],
       '/devtools/': [''],
       '/reference/': ['', 'helpers', 'config', 'server-config', 'how-to'],
