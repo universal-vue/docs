@@ -84,41 +84,7 @@ const defaultOptions = {
 //...
 ```
 
-Then you need to create a UVue plugins to handler SSR data from apollo:
-
-In `src/plugins/apollo.js`:
-
-```js
-import 'isomorphic-fetch';
-import Vue from 'vue';
-import ApolloSSR from 'vue-apollo/ssr';
-import App from '../App.vue';
-
-if (process.server) {
-  Vue.use(ApolloSSR);
-}
-
-export default {
-  async routeResolve({ app, ssr, route, store, error, routeComponents }) {
-    if (process.server) {
-      try {
-        await ApolloSSR.prefetchAll(app.$apolloProvider, [App, ...routeComponents], {
-          route,
-          store,
-        });
-        ssr.bodyAdd = `<script>window.__APOLLO_STATE__=${JSON.stringify(
-          ApolloSSR.getStates(app.$apolloProvider),
-        )}</script>`;
-      } catch (err) {
-        error(err);
-      }
-    }
-  },
-};
-```
-
-As you can see, Vue Apollo use `fetch()` to do ajax calls, this will not be available with NodeJS (server-side).
-So you have to install a polyfill called `isomorphic-fetch`:
+Then you need to define UVue Apollo plugin:
 
 ```bash
 npm install -S isomorphic-fetch
@@ -130,6 +96,6 @@ In `uvue.config.js`:
 
 ```js
 export default {
-  plugins: ['@/plugins/apollo'],
+  plugins: ['@uvue/core/plugins/apollo'],
 };
 ```
