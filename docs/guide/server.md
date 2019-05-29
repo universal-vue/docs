@@ -76,7 +76,7 @@ export default {
 };
 ```
 
-:::tip
+:::tip 
 You can watch for files changes and reload automatically your server if changes occurs.
 
 In `server.config.js`:
@@ -137,11 +137,11 @@ export default {
 };
 ```
 
-:::tip
+:::tip 
 `request` and `reply` objects from Fastify framework will be injected to the [`context`](/reference/#context) object.
 :::
 
-:::tip
+:::tip 
 Current [live demo](http://uvue.yabab.net/) use fastify, you can check source code here:
 [universal-vue/examples](https://github.com/universal-vue/examples)
 :::
@@ -165,6 +165,6 @@ export default {
 };
 ```
 
-:::tip
+:::tip 
 `ctx` object from Koa framework will be injected to the [`context`](/reference/#context) object
 :::

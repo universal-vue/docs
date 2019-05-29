@@ -23,7 +23,7 @@ You can see 2 options on this configuration:
 You can switch theses values from `inline` to `extract`: on production build, styles from your app will
 be extracted in a dedicated CSS file.
 
-:::tip
+:::tip 
 In production mode, don't forget to compress your final CSS with cssnano:
 
 In `postcss.config.js`
@@ -37,11 +37,3 @@ module.exports = {
 };
 ```
 :::
-
-## Critical CSS
-
-:::warning
-Work in progress!
-:::
-
-TODO

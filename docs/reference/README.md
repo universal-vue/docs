@@ -43,7 +43,7 @@ Below variables will be replaced during Webpack bundling with defined values and
 | `process.client` | In SSR mode only: return `true` if in client rendering, `false` if in server side rendering |
 | `process.server` | In SSR mode only: return `true` if in server side rendering, `false` otherwise              |
 
-:::tip
+:::tip 
 To inject environment variables see the official [Vue CLI documentation](https://cli.vuejs.org/guide/mode-and-env.html)
 :::
 

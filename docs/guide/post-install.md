@@ -1,9 +1,12 @@
 # Post installation notes
 
+
 At installation, this plugin will try to fix your current project code to make it compatible
 with Vue SSR. If you install others Vue CLI plugin after UVue, you have to run `ssr:fix` command.
 
 But you need to keep in mind some various things to succeed in building SSR apps:
+
+[[toc]]
 
 ## Avoid stateful singletons
 
@@ -39,7 +42,7 @@ export default () => {
 Because this function will be called on eash HTTP request, we are sure that with a fresh
 router instance for each users.
 
-:::tip
+:::tip  
 Command `ssr:fix` try to fix common plugins, see [list of supported plugins]()
 :::
 
@@ -113,7 +116,7 @@ export default {
 }
 ```
 
-:::tip
+:::tip  
 Command `ssr:fix-vuex` try to fix them automatically
 :::
 

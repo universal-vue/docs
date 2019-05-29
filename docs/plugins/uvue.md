@@ -116,7 +116,7 @@ export default {
 
 Please take a look to [UVue core plugins](https://github.com/universal-vue/uvue/tree/master/packages/%40uvue/core/plugins) already done
 
-:::warning
+:::warning 
 Use `this` with precaution: data in it will ba shared across all
 HTTP requests on server side.
 :::

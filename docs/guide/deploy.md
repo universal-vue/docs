@@ -22,7 +22,7 @@ using nginx to serve your static/bundled files:
 docker-compose up -d
 ```
 
-:::tip
+:::tip 
 In this case `@uvue/server/plugins/static` and `@uvue/server/plugins/gzip` can
 be removed from your configuration
 :::
@@ -68,7 +68,7 @@ git push heroku master
 
 ## Now v2
 
-:::warning
+:::warning 
 Actually this method only works with **NPM** and not with **Yarn**. So, if you use **Yarn**,
 you need to remove `yarn.lock` and do a **NPM** install to have a `package-lock.json` file.
 :::
@@ -130,7 +130,7 @@ Finally we need to add a build script to our `package.json`:
 }
 ```
 
-:::tip
+:::tip 
 If you want a faster build you can move some dev dependencies (like Cypress) to peer dependencies.
 :::
 

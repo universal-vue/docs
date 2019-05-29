@@ -18,7 +18,7 @@ export default {
 };
 ```
 
-:::tip
+:::tip 
 
 - The first argument can be a `location` like in [`router.push()` or `router.replace()` methods](https://router.vuejs.org/guide/essentials/navigation.html#router-push-location-oncomplete-onabort)
 - The second argument is the HTTP status code (301 by default)
@@ -27,7 +27,7 @@ export default {
 
 ## Throw an error
 
-:::warning
+:::warning 
 This needs `@uvue/core/plugins/errorHandler` plugin installed on your project
 :::
 
@@ -47,7 +47,7 @@ export default {
 };
 ```
 
-:::tip
+:::tip 
 
 - First argument is an object or a string
 - Second argument is the HTTP status code (500 by default)

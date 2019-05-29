@@ -24,7 +24,7 @@ export default {
 };
 ```
 
-:::tip
+:::tip 
 Order of plugins matters
 :::
 
@@ -52,7 +52,7 @@ export default {
 
 This method receive a [context](/reference/) as first argument.
 
-:::warning
+:::warning 
 This method is only called on your pages components (defined in your router)
 :::
 
@@ -80,12 +80,12 @@ export default () => {
 };
 ```
 
-:::warning
+:::warning 
 This method is only called on a real HTTP request to show current page. Future navigation
 (from client side) will not trigger this action.
 :::
 
-:::danger
+:::danger 
 For your Vuex main store or modules, don't forget to initialize state with a factory function.
 :::
 
@@ -136,7 +136,7 @@ _src/views/Example.vue_
 </script>
 ```
 
-:::warning
+:::warning 
 The asyncData method is only called on your view components (defined in your router).
 :::
 
@@ -156,7 +156,7 @@ _src/components/Example.vue_
 </script>
 ```
 
-:::danger
+:::danger 
 You cannot use `this` in either of these methods, because the component is not created yet.
 :::
 
@@ -216,7 +216,7 @@ export default {
 
 Each middleware will receive a [context](/reference/) as first argument.
 
-:::tip
+:::tip 
 Others UVue plugins ca define global middlewares too:
 
 ```js
@@ -300,7 +300,7 @@ export default {
 
 [Official docs](https://github.com/declandewet/vue-meta)
 
-:::tip
+:::tip 
 To use with TypeScript, you will need to setup types definitions, in `src/vue-shims.d.ts`:
 
 ```ts

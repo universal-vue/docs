@@ -53,7 +53,7 @@ npm run ssr:static
 npm run ssr:fix
 ```
 
-:::tip
+:::tip 
 The `serve` and `build` commands are still available to run your application in SPA mode
 :::
 

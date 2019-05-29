@@ -1,10 +1,10 @@
 # How to
 
-:::warning
+:::warning 
 Work in progress!
 :::
 
-:::tip
+:::tip 
 You can take a look at the [UVue demo](http://uvue.yabab.net), all source code are published
 in [universal-vue/examples](https://github.com/universal-vue/examples) repository!
 :::
