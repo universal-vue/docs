@@ -144,7 +144,7 @@ now
 
 **Docs in progress**
 
-See this sample repo: https://github.com/universal-vue/faas-deploy
+See this sample repo: [https://github.com/universal-vue/faas-deploy](https://github.com/universal-vue/faas-deploy)
 
 **Main steps:**
 

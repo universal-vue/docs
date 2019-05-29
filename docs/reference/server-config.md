@@ -67,7 +67,7 @@ export default {
   /**
    * Configuration for static generation
    */
-  generate: {
+  static: {
     paths: [],
     scanRouter: true,
     params: {},
