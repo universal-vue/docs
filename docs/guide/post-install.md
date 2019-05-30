@@ -1,24 +1,21 @@
 # Post installation notes
 
-
 At installation, this plugin will try to fix your current project code to make it compatible
 with Vue SSR. If you install others Vue CLI plugin after UVue, you have to run `ssr:fix` command.
 
 But you need to keep in mind some various things to succeed in building SSR apps:
-
-[[toc]]
 
 ## Avoid stateful singletons
 
 Avoid to create singletons in the global scope, beacuse they will be shared accross all
 HTTP requests and so accross all users that use your application.
 
-You can read more [on the official documentation](https://ssr.vuejs.org/guide/structure.html#avoid-stateful-singletons)
+You can read more [from the official documentation](https://ssr.vuejs.org/guide/structure.html#avoid-stateful-singletons)
 
 ### Vue plugins
 
-Basically you'll see this plugin overwrite some of your code to avoid that for some Vue plugins.
-For example, Vue Router: instead of defining a `new Router()` in , we need to create a function
+Basically you'll see this plugin overwrite some of your code to avoid stateful singletons for some Vue plugins.
+For example, Vue Router: instead of simply defining a `new Router()`, we need to create a factory function
 that return the new Router instance:
 
 ```js
@@ -27,7 +24,7 @@ export default () => {
 };
 ```
 
-Then we use this function inside the another function defined in your `main.js` file:
+Then we call this one inside the another function defined in your `main.js` file:
 
 ```js
 import createRouter from './router';
@@ -39,11 +36,11 @@ export default () => {
 }
 ```
 
-Because this function will be called on eash HTTP request, we are sure that with a fresh
+Because this function will be called on each HTTP request, we are sure that with a fresh
 router instance for each users.
 
 :::tip  
-Command `ssr:fix` try to fix common plugins, see [list of supported plugins]()
+Command `ssr:fix` try to fix common plugins, see [list of supported plugins](/guide/vue-cli-plugins.html)
 :::
 
 ### HTTP/AJAX client
@@ -65,7 +62,7 @@ export async function login() {
   // POST request
   const { data } = await httpClient.post(/* ... */);
 
-  // Gte token from response
+  // Get token from response
   if (data.token) {
     // Store it on our httpClient
     httpClient.defaults.headers.common['Authorization'] = data.token;
@@ -85,7 +82,7 @@ will be created once and shared across all HTTP requests. So users will share th
 tokens...
 
 To avoid that you can create an [UVue plugin](/plugins/uvue.html#write-your-own-plugin)
-and use its hooks to instanciante `httpClient`.
+and use its hooks to instantiate `httpClient`.
 
 [Example here](https://github.com/universal-vue/examples/blob/master/src/plugins/httpClient.js)
 
@@ -105,7 +102,7 @@ export default () => {
 ## Vuex states
 
 Like Vue plugins or JS packages, you need to be careful on how you create your
-vanilla Vuex states, in this case, you need to use factory functions too:
+Vuex states, in this case, you need to use factory functions too:
 
 ```js
 export default {
