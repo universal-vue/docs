@@ -24,7 +24,7 @@ export default {
         // Enable or disable `fetch()` methods on page components
         fetch: false,
 
-        // Enable or diable `onHttpRequest()` action on your main Vuex store
+        // Enable or disable `onHttpRequest()` action on your main Vuex store
         onHttpRequest: true,
       },
     ],
