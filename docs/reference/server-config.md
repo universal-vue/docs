@@ -56,10 +56,12 @@ export default {
 
   /**
    * Vue SSR renderer otions
+   * See: https://ssr.vuejs.org/api/#renderer-options
    */
   renderer: {
     cache: null,
     directives: [],
+    runInNewContext: false,
     shouldPrefetch() {},
     shouldPreload() {},
   },
