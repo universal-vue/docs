@@ -160,6 +160,48 @@ _src/components/Example.vue_
 You cannot use `this` in either of these methods, because the component is not created yet.
 :::
 
+## Vue serverPrefetch hook
+
+Vue 2.6 introduce a new hook to fetch data before the server-side rendering. This hook
+can be used at any component level.
+
+You can read official docs here: [https://ssr.vuejs.org/guide/data.html](https://ssr.vuejs.org/guide/data.html)
+
+## Prefetch mixin
+
+> `@uvue/core/plugins/prefetch`
+
+As you can see in Vue SSR docs above, `serverPrefetch` hook is mostly used with Vuex
+and need some checks on client side to determine if data is already loaded or not.
+
+This plugin symplify this hook, and create another: `prefetch` hook.
+
+With this, you can populate the data of your component, and you don't have to worry
+about the client check.
+
+Example:
+
+```html
+<template>
+  <div>
+    Data from prefetch: {{ value }}
+  </div>
+</template>
+
+<script>
+export default {
+  data: () => ({
+    value: null,
+  }),
+
+  async prefetch() {
+    // We can use `this` here
+    this.value = await this.$http.get('...');
+  }
+}
+</script>
+```
+
 ## Middlewares
 
 > `@uvue/core/plugins/middlewares`
