@@ -24,10 +24,28 @@ export default {
 };
 ```
 
+## HTTP/2
+
+You can enable HTTP/2 server with a simple comfiguration:
+
+In `server.config.js`:
+
+```js
+export default {
+  http2: true,
+};
+```
+
+::: warning
+You need an [HTTPS](#https) configuration to make this work!
+:::
+
 ## Vue renderer / directives
 
 For Vue directives you have to rewrite them make them compatible with SSR. You can define
-these rewrites in server config file:
+these rewrites in server config file.
+
+In `server.config.js`:
 
 ```js
 export default {
