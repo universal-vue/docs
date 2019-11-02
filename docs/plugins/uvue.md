@@ -32,6 +32,10 @@ export default {
 };
 ```
 
+### [Prefetch](/guide/usage.html#vue-serverprefetch-hook)
+
+Fetch your data at component level (and not at route level). You can use `this` in this hook.
+
 ### [Middlewares](/guide/usage.html#middlewares)
 
 To perform checks before a route is rendered.

@@ -532,8 +532,8 @@ Use vue-no-ssr package to not render a component on server side:
 
 Some good articles on it:
 
-- https://ssr.vuejs.org/guide/universal.html
-- https://blog.lichter.io/posts/the-guide-to-write-universal-ssr-ready-vue-compon
+- [https://ssr.vuejs.org/guide/universal.html](https://ssr.vuejs.org/guide/universal.html)
+- [https://blog.lichter.io/posts/the-guide-to-write-universal-ssr-ready-vue-compon](https://blog.lichter.io/posts/the-guide-to-write-universal-ssr-ready-vue-compon)
 
 ## Modern build
 

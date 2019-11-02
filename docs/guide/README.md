@@ -53,6 +53,12 @@ npm run ssr:static
 npm run ssr:fix
 ```
 
+**Try to fix Vuex states to be SSR compatible**
+
+```bash
+npm run ssr:fix-vuex
+```
+
 :::tip 
 The `serve` and `build` commands are still available to run your application in SPA mode
 :::
