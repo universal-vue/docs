@@ -98,8 +98,6 @@ export default {
 };
 ```
 
-:::
-
 ## Async data and fetch
 
 > `@uvue/core/plugins/asyncData`
