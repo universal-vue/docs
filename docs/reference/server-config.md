@@ -80,5 +80,10 @@ export default {
    */
   watch: ['server.config.js'],
   watchIgnore: ['dist/**/*'],
+
+  /**
+   * Add some packages to webpack-node-externals
+   */
+  externalsWhitelist: [],
 };
 ```

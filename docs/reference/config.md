@@ -44,10 +44,5 @@ export default {
     normal: 'inline', // Or `extract`
     vue: 'inline', // Or `extract`
   },
-
-  /**
-   * Add some packages to webpack-node-externals
-   */
-  externalsWhitelist: [],
 };
 ```
