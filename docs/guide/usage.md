@@ -35,6 +35,15 @@ Order of plugins matters
 This plugin will offer you the possibility to inject data from server-side
 to your Vuex store.
 
+To use it, you need to specify the methods inside the plugin options as desired:
+
+```js
+      {
+        onHttpRequest: true,
+        fetch: true
+      },
+```
+
 **`fetch()` method**
 
 In a page component (e.g. `src/views/Home.vue`) :
