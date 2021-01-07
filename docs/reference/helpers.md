@@ -7,12 +7,12 @@ A simple function to redirect to a specific page that works on client and server
 ```js
 export default {
   async asyncData({ redirect }) {
-    redirect({ to: '' }, 302);
+    redirect({ path: '' }, 302);
   },
 
   methods: {
     onClick() {
-      this.$redirect({ to: '/some-path' });
+      this.$redirect({ path: '/some-path' });
     },
   },
 };
