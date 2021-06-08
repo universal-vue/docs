@@ -97,12 +97,12 @@ export default {
   },
 
   // When an error is thrown during a routeResolve() call
-  async routeError(error, context) {
+  async routeError(context, error) {
     //...
   },
 
   // When a error is thrown during plugins hooks
-  catchError(error, context) {
+  catchError(context, error) {
     //...
   },
 
