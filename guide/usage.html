@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Usage | UVue</title>
+    <meta name="description" content="Build universal Vue applications with ease">
+    
+    
+    <link rel="preload" href="/docs/assets/css/0.styles.b38bced7.css" as="style"><link rel="preload" href="/docs/assets/js/app.15f00be4.js" as="script"><link rel="preload" href="/docs/assets/js/4.fc7003b0.js" as="script"><link rel="preload" href="/docs/assets/js/14.7cd195ff.js" as="script"><link rel="prefetch" href="/docs/assets/js/10.8f3179b7.js"><link rel="prefetch" href="/docs/assets/js/11.f8c7b5a9.js"><link rel="prefetch" href="/docs/assets/js/12.49607816.js"><link rel="prefetch" href="/docs/assets/js/13.5f7695fd.js"><link rel="prefetch" href="/docs/assets/js/15.4c5b1b83.js"><link rel="prefetch" href="/docs/assets/js/16.fa7a2580.js"><link rel="prefetch" href="/docs/assets/js/17.d4d3a39c.js"><link rel="prefetch" href="/docs/assets/js/18.6a96a419.js"><link rel="prefetch" href="/docs/assets/js/19.34105fa6.js"><link rel="prefetch" href="/docs/assets/js/20.41884a45.js"><link rel="prefetch" href="/docs/assets/js/21.2c8ac63f.js"><link rel="prefetch" href="/docs/assets/js/22.9b319bc4.js"><link rel="prefetch" href="/docs/assets/js/23.fbe2603e.js"><link rel="prefetch" href="/docs/assets/js/24.2d8c48a4.js"><link rel="prefetch" href="/docs/assets/js/3.2c50f967.js"><link rel="prefetch" href="/docs/assets/js/5.cfb03ba7.js"><link rel="prefetch" href="/docs/assets/js/6.e5a61036.js"><link rel="prefetch" href="/docs/assets/js/7.5321ff88.js"><link rel="prefetch" href="/docs/assets/js/8.10146140.js"><link rel="prefetch" href="/docs/assets/js/9.aed93118.js"><link rel="prefetch" href="/docs/assets/js/vendors~docsearch.716cbd87.js">
+    <link rel="stylesheet" href="/docs/assets/css/0.styles.b38bced7.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/docs/" class="home-link router-link-active"><img src="/docs/logo.png" alt="UVue" class="logo"> <span class="site-name can-hide">UVue</span></a> <nav class="nav-links can-hide"><div class="nav-item"><a href="/docs/guide/" class="nav-link router-link-active">Guide</a></div><div class="nav-item"><a href="/docs/plugins/" class="nav-link">Plugins</a></div><div class="nav-item"><a href="/docs/devtools/" class="nav-link">Dev tools</a></div><div class="nav-item"><a href="/docs/reference/" class="nav-link">Reference</a></div> <!----></nav> <div class="links" style="max-width:nullpx;"><form id="search-form" class="algolia-search-wrapper search-box"><input id="algolia-search-input" class="search-query"></form> <div><a title="Chat" href="https://discord.gg/3ZZBmFs" target="_blank"><svg id="chat" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="picto"><g data-name="Layer 2"><g data-name="message-circle"><rect width="24" height="24" opacity="0"></rect> <path d="M19.07 4.93a10 10 0 0 0-16.28 11 1.06 1.06 0 0 1 .09.64L2 20.8a1 1 0 0 0 .27.91A1 1 0 0 0 3 22h.2l4.28-.86a1.26 1.26 0 0 1 .64.09 10 10 0 0 0 11-16.28zM8 13a1 1 0 1 1 1-1 1 1 0 0 1-1 1zm4 0a1 1 0 1 1 1-1 1 1 0 0 1-1 1zm4 0a1 1 0 1 1 1-1 1 1 0 0 1-1 1z"></path></g></g></svg></a> <a title="Github" href="https://github.com/universal-vue/uvue" target="_blank"><svg id="github" xmlns="http://www.w3.org/2000/svg" width="161.033" height="157.058" viewBox="0 0 42.607 41.555" class="picto"><path d="M21.304 0C9.539 0 0 9.538 0 21.304 0 30.716 6.104 38.7 14.569 41.518c1.064.198 1.455-.462 1.455-1.024 0-.508-.02-2.187-.029-3.967-5.926 1.289-7.177-2.513-7.177-2.513-.97-2.463-2.365-3.117-2.365-3.117-1.933-1.323.145-1.295.145-1.295 2.14.15 3.266 2.195 3.266 2.195 1.9 3.257 4.984 2.315 6.2 1.77.19-1.376.743-2.316 1.352-2.848-4.732-.539-9.706-2.365-9.706-10.528 0-2.326.832-4.226 2.195-5.718-.221-.537-.95-2.704.206-5.638 0 0 1.79-.573 5.86 2.184a20.42 20.42 0 0 1 5.333-.717c1.81.008 3.634.245 5.336.717 4.066-2.757 5.853-2.184 5.853-2.184 1.16 2.934.43 5.1.209 5.638 1.366 1.492 2.192 3.392 2.192 5.718 0 8.182-4.983 9.984-9.727 10.511.764.661 1.445 1.958 1.445 3.945 0 2.85-.025 5.145-.025 5.847 0 .567.384 1.23 1.463 1.022 8.46-2.82 14.557-10.803 14.557-20.212C42.607 9.538 33.069 0 21.304 0" fill="#1b1817" fill-rule="evenodd"></path></svg></a></div></div></header> <div class="sidebar-mask"></div> <div class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/docs/guide/" class="nav-link router-link-active">Guide</a></div><div class="nav-item"><a href="/docs/plugins/" class="nav-link">Plugins</a></div><div class="nav-item"><a href="/docs/devtools/" class="nav-link">Dev tools</a></div><div class="nav-item"><a href="/docs/reference/" class="nav-link">Reference</a></div> <!----></nav>  <ul class="sidebar-links"><li><a href="/docs/guide/" class="sidebar-link">Universal Vue</a></li><li><a href="/docs/guide/post-install.html" class="sidebar-link">Post installation notes</a></li><li><a href="/docs/guide/usage.html" class="active sidebar-link">Usage</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/docs/guide/usage.html#vuex" class="sidebar-link">Vuex</a></li><li class="sidebar-sub-header"><a href="/docs/guide/usage.html#async-data-and-fetch" class="sidebar-link">Async data and fetch</a></li><li class="sidebar-sub-header"><a href="/docs/guide/usage.html#vue-serverprefetch-hook" class="sidebar-link">Vue serverPrefetch hook</a></li><li class="sidebar-sub-header"><a href="/docs/guide/usage.html#prefetch-mixin" class="sidebar-link">Prefetch mixin</a></li><li class="sidebar-sub-header"><a href="/docs/guide/usage.html#middlewares" class="sidebar-link">Middlewares</a></li><li class="sidebar-sub-header"><a href="/docs/guide/usage.html#metas" class="sidebar-link">Metas</a></li><li class="sidebar-sub-header"><a href="/docs/guide/usage.html#error-handler" class="sidebar-link">Error handler</a></li><li class="sidebar-sub-header"><a href="/docs/guide/usage.html#spa-paths" class="sidebar-link">SPA paths</a></li><li class="sidebar-sub-header"><a href="/docs/guide/usage.html#generate-static-website" class="sidebar-link">Generate static website</a></li><li class="sidebar-sub-header"><a href="/docs/guide/usage.html#use-ssr-non-compatible-libraries" class="sidebar-link">Use SSR non-compatible libraries</a></li><li class="sidebar-sub-header"><a href="/docs/guide/usage.html#modern-build" class="sidebar-link">Modern build</a></li></ul></li><li><a href="/docs/guide/css.html" class="sidebar-link">CSS management</a></li><li><a href="/docs/guide/vue-cli-plugins.html" class="sidebar-link">Vue CLI plugins</a></li><li><a href="/docs/guide/server.html" class="sidebar-link">Server</a></li><li><a href="/docs/guide/deploy.html" class="sidebar-link">Deployment</a></li></ul> </div> <div class="page"> <div class="content__default"><h1 id="usage"><a href="#usage" class="header-anchor">#</a> Usage</h1> <p>UVue offers some basic tools to build a SSR application more easly
+Most of available API in UVue is exposed with plugins. Bellow sections will
+indicate path to these plugins.</p> <p>You can use them when they are installed in <code>uvue.config.js</code> located in the root
+folder of your application:</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token punctuation">{</span>
+  plugins<span class="token punctuation">:</span> <span class="token punctuation">[</span>
+    <span class="token comment">// Install asyncData plugin</span>
+    <span class="token string">'@uvue/core/plugins/asyncData'</span><span class="token punctuation">,</span>
+
+    <span class="token comment">// Install Vuex plugin</span>
+    <span class="token punctuation">[</span>
+      <span class="token string">'@uvue/core/plugins/vuex'</span><span class="token punctuation">,</span>
+      <span class="token punctuation">{</span>
+        <span class="token comment">// Some options...</span>
+      <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token punctuation">]</span><span class="token punctuation">,</span>
+  <span class="token punctuation">]</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+</code></pre></div><div class="custom-block tip"><p class="custom-block-title">TIP</p> <p>Order of plugins matters</p></div> <h2 id="vuex"><a href="#vuex" class="header-anchor">#</a> Vuex</h2> <blockquote><p><code>@uvue/core/plugins/vuex</code></p></blockquote> <p>This plugin will offer you the possibility to inject data from server-side
+to your Vuex store.</p> <p><strong><code>fetch()</code> method</strong></p> <p>In a page component (e.g. <code>src/views/Home.vue</code>) :</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token punctuation">{</span>
+  <span class="token keyword">async</span> <span class="token function">fetch</span><span class="token punctuation">(</span><span class="token parameter"><span class="token punctuation">{</span> store <span class="token punctuation">}</span></span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">const</span> data <span class="token operator">=</span> <span class="token keyword">await</span> api<span class="token punctuation">.</span><span class="token function">get</span><span class="token punctuation">(</span><span class="token string">'some-data'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token comment">// Populate your vuex store</span>
+    store<span class="token punctuation">.</span><span class="token function">commit</span><span class="token punctuation">(</span><span class="token string">'SET_DATA'</span><span class="token punctuation">,</span> data<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+</code></pre></div><p>This method receive a <a href="/docs/reference/">context</a> as first argument.</p> <div class="custom-block warning"><p class="custom-block-title">WARNING</p> <p>This method is only called on your pages components (defined in your router)</p></div> <p><strong><code>onHttpRequest()</code> store action</strong></p> <p>In your <code>src/store.js</code> store file you add an action called <code>onHttpRequest</code>
+This action will be called before your application is ready. The second argument is a
+<a href="/docs/reference/"><code>context</code></a> variable. The purpose of this action is to fill your Vuex store
+on each HTTP requests and will not be not called on future client navigations.</p> <p>In SPA mode too this action is called before application is ready.</p> <p>In your Vuex store (e.g. <code>src/store.js</code>):</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+  <span class="token keyword">return</span> <span class="token keyword">new</span> <span class="token class-name">Vuex<span class="token punctuation">.</span>Store</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+    actions<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+      <span class="token keyword">async</span> <span class="token function">onHttpRequest</span><span class="token punctuation">(</span><span class="token parameter"><span class="token punctuation">{</span> commit <span class="token punctuation">}</span></span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">const</span> data <span class="token operator">=</span> <span class="token keyword">await</span> <span class="token function">api</span><span class="token punctuation">(</span><span class="token string">'/some-data'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token function">commit</span><span class="token punctuation">(</span><span class="token string">'SET_DATA'</span><span class="token punctuation">,</span> data<span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+</code></pre></div><div class="custom-block warning"><p class="custom-block-title">WARNING</p> <p>This method is only called on a real HTTP request to show current page. Future navigation
+(from client side) will not trigger this action.</p></div> <div class="custom-block danger"><p class="custom-block-title">DANGER</p> <p>For your Vuex main store or modules, don't forget to initialize state with a factory function.</p></div> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token punctuation">{</span>
+  namespaced<span class="token punctuation">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+  <span class="token function-variable function">state</span><span class="token punctuation">:</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">(</span><span class="token punctuation">{</span>
+    <span class="token comment">// Some data...</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+</code></pre></div><h2 id="async-data-and-fetch"><a href="#async-data-and-fetch" class="header-anchor">#</a> Async data and fetch</h2> <blockquote><p><code>@uvue/core/plugins/asyncData</code></p></blockquote> <p>You can setup an <code>asyncData()</code> method on your view components. This method will be
+called before the page is created. This method receives a <a href="/docs/reference/">context</a> as first argument and you can populate
+your Vuex store and your view's data.</p> <p>You can do the same in a component's <code>fetch()</code> method, minus the ability to inject data. It is only used to populate your store.</p> <p>Examples:</p> <p><em>src/views/Example.vue</em></p> <div class="language-html extra-class"><pre class="language-html"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>template</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span><span class="token punctuation">&gt;</span></span>Data from asyncData: {{ foo }}<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>template</span><span class="token punctuation">&gt;</span></span>
+
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">&gt;</span></span><span class="token script"><span class="token language-javascript">
+  <span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token punctuation">{</span>
+    <span class="token keyword">async</span> <span class="token function">asyncData</span><span class="token punctuation">(</span><span class="token parameter"><span class="token punctuation">{</span> store <span class="token punctuation">}</span></span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">const</span> data <span class="token operator">=</span> <span class="token keyword">await</span> api<span class="token punctuation">.</span><span class="token function">get</span><span class="token punctuation">(</span><span class="token string">'some-data'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+      <span class="token comment">// Of course you can populate your Vuex store</span>
+      store<span class="token punctuation">.</span><span class="token function">commit</span><span class="token punctuation">(</span><span class="token string">'SET_DATA'</span><span class="token punctuation">,</span> data<span class="token punctuation">.</span>vuex<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+      <span class="token comment">// And send data to current component</span>
+      <span class="token keyword">return</span> <span class="token punctuation">{</span>
+        foo<span class="token punctuation">:</span> data<span class="token punctuation">.</span>foo<span class="token punctuation">,</span>
+      <span class="token punctuation">}</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token punctuation">}</span><span class="token punctuation">;</span>
+</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span>
+</code></pre></div><div class="custom-block warning"><p class="custom-block-title">WARNING</p> <p>The asyncData method is only called on your view components (defined in your router).</p></div> <p><em>src/components/Example.vue</em></p> <div class="language-html extra-class"><pre class="language-html"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>template</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span><span class="token punctuation">&gt;</span></span>Data from fetch: {{ $store.state.foo }}<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>template</span><span class="token punctuation">&gt;</span></span>
+
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">&gt;</span></span><span class="token script"><span class="token language-javascript">
+  <span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token punctuation">{</span>
+    <span class="token keyword">async</span> <span class="token function">fetch</span><span class="token punctuation">(</span><span class="token parameter"><span class="token punctuation">{</span> store <span class="token punctuation">}</span></span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">await</span> store<span class="token punctuation">.</span><span class="token function">dispatch</span><span class="token punctuation">(</span><span class="token string">'GET_DATA'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token punctuation">}</span><span class="token punctuation">;</span>
+</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span>
+</code></pre></div><div class="custom-block danger"><p class="custom-block-title">DANGER</p> <p>You cannot use <code>this</code> in either of these methods, because the component is not created yet.</p></div> <h2 id="vue-serverprefetch-hook"><a href="#vue-serverprefetch-hook" class="header-anchor">#</a> Vue serverPrefetch hook</h2> <p>Vue 2.6 introduce a new hook to fetch data before the server-side rendering. This hook
+can be used at any component level.</p> <p>You can read official docs here: <a href="https://ssr.vuejs.org/guide/data.html" target="_blank" rel="noopener noreferrer">https://ssr.vuejs.org/guide/data.html<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></p> <h2 id="prefetch-mixin"><a href="#prefetch-mixin" class="header-anchor">#</a> Prefetch mixin</h2> <blockquote><p><code>@uvue/core/plugins/prefetch</code></p></blockquote> <p>As you can see in Vue SSR docs above, <code>serverPrefetch</code> hook is mostly used with Vuex
+and need some checks on client side to determine if data is already loaded or not.</p> <p>This plugin symplify this hook, and create another: <code>prefetch</code> hook.</p> <p>With this, you can populate the data of your component, and you don't have to worry
+about the client check.</p> <p>Example:</p> <div class="language-html extra-class"><pre class="language-html"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>template</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span><span class="token punctuation">&gt;</span></span>
+    Data from prefetch: {{ value }}
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>template</span><span class="token punctuation">&gt;</span></span>
+
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">&gt;</span></span><span class="token script"><span class="token language-javascript">
+<span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token punctuation">{</span>
+  <span class="token function-variable function">data</span><span class="token punctuation">:</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">(</span><span class="token punctuation">{</span>
+    value<span class="token punctuation">:</span> <span class="token keyword">null</span><span class="token punctuation">,</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+
+  <span class="token keyword">async</span> <span class="token function">prefetch</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token comment">// We can use `this` here</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span>value <span class="token operator">=</span> <span class="token keyword">await</span> <span class="token keyword">this</span><span class="token punctuation">.</span>$http<span class="token punctuation">.</span><span class="token function">get</span><span class="token punctuation">(</span><span class="token string">'...'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span>
+</code></pre></div><h2 id="middlewares"><a href="#middlewares" class="header-anchor">#</a> Middlewares</h2> <blockquote><p><code>@uvue/core/plugins/middlewares</code></p></blockquote> <p>You can apply global or per-route middlewares. The main purpose of this plugin is to quickly setup
+functions to run before all others plugins (e.g. check authorizations on your routes):</p> <p>In <code>src/some/middleware.js</code></p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token keyword">async</span> <span class="token punctuation">(</span><span class="token parameter"><span class="token punctuation">{</span> store<span class="token punctuation">,</span> redirect <span class="token punctuation">}</span></span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+  <span class="token comment">// Use is not logged</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span>store<span class="token punctuation">.</span>getters<span class="token punctuation">.</span>user<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token comment">// Here we use error handler system</span>
+    <span class="token function">error</span><span class="token punctuation">(</span><span class="token string">'Forbidden'</span><span class="token punctuation">,</span> <span class="token number">403</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+</code></pre></div><p>You can declare middlewares via Routes metas object:</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+  <span class="token keyword">return</span> <span class="token keyword">new</span> <span class="token class-name">Router</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+    routes<span class="token punctuation">:</span> <span class="token punctuation">[</span>
+      <span class="token punctuation">{</span>
+        path<span class="token punctuation">:</span> <span class="token string">'/some-path'</span><span class="token punctuation">,</span>
+        <span class="token function-variable function">component</span><span class="token punctuation">:</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token keyword">import</span><span class="token punctuation">(</span><span class="token string">'./MyComponent.vue'</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+        meta<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+          middlewares<span class="token punctuation">:</span> <span class="token punctuation">[</span>checkUser<span class="token punctuation">]</span><span class="token punctuation">,</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+      <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token punctuation">]</span><span class="token punctuation">,</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+</code></pre></div><p>You can also apply global middlewares called on all routes:</p> <p>In <code>uvue.config.js</code></p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token punctuation">{</span>
+  plugins<span class="token punctuation">:</span> <span class="token punctuation">[</span>
+    <span class="token punctuation">[</span>
+      <span class="token string">'@uvue/core/plugins/middlewares'</span><span class="token punctuation">,</span>
+      <span class="token punctuation">{</span>
+        middlewares<span class="token punctuation">:</span> <span class="token punctuation">[</span>globalMiddleware<span class="token punctuation">]</span><span class="token punctuation">,</span>
+      <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token punctuation">]</span><span class="token punctuation">,</span>
+  <span class="token punctuation">]</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+</code></pre></div><p>Each middleware will receive a <a href="/docs/reference/">context</a> as first argument.</p> <div class="custom-block tip"><p class="custom-block-title">TIP</p> <p>Others UVue plugins ca define global middlewares too:</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token comment">// some-plugin.js</span>
+<span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token punctuation">{</span>
+  <span class="token function">middlewares</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span><span class="token punctuation">:</span> <span class="token punctuation">[</span>
+      globalMiddleware
+    <span class="token punctuation">]</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+</code></pre></div></div> <h2 id="metas"><a href="#metas" class="header-anchor">#</a> Metas</h2> <p><a href="https://github.com/declandewet/vue-meta" target="_blank" rel="noopener noreferrer">Vue meta<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a> plugin is automatically managed by UVue in SSR.
+Things to do to use this plugin is to install it:</p> <div class="language-bash extra-class"><pre class="language-bash"><code><span class="token function">npm</span> <span class="token function">install</span> vue-meta
+</code></pre></div><p>Then you need to setup it in your application:</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">import</span> VueMeta <span class="token keyword">from</span> <span class="token string">'vue-meta'</span><span class="token punctuation">;</span>
+
+Vue<span class="token punctuation">.</span><span class="token function">use</span><span class="token punctuation">(</span>VueMeta<span class="token punctuation">,</span> <span class="token punctuation">{</span>
+  <span class="token comment">// some options</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre></div><p>To use it, you can define global metas (applied to all routes) in your <code>src/App.vue</code> file:</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token punctuation">{</span>
+  metaInfo<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+    title<span class="token punctuation">:</span> <span class="token string">'App'</span><span class="token punctuation">,</span>
+    meta<span class="token punctuation">:</span> <span class="token punctuation">[</span>
+      <span class="token punctuation">{</span> charset<span class="token punctuation">:</span> <span class="token string">'utf-8'</span> <span class="token punctuation">}</span><span class="token punctuation">,</span>
+      <span class="token punctuation">{</span> name<span class="token punctuation">:</span> <span class="token string">'viewport'</span><span class="token punctuation">,</span> content<span class="token punctuation">:</span> <span class="token string">'width=device-width, initial-scale=1'</span> <span class="token punctuation">}</span>
+      <span class="token comment">// Use vmid here for pages that needs to override this value</span>
+      <span class="token punctuation">{</span> vmid<span class="token punctuation">:</span> <span class="token string">'description'</span><span class="token punctuation">,</span> name<span class="token punctuation">:</span> <span class="token string">'description'</span><span class="token punctuation">,</span> content<span class="token punctuation">:</span> <span class="token string">'My awesome application'</span> <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token punctuation">]</span><span class="token punctuation">,</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+</code></pre></div><p>And finally you can override these settings on each page component:</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token punctuation">{</span>
+  metaInfo<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+    title<span class="token punctuation">:</span> <span class="token string">'About !'</span><span class="token punctuation">,</span>
+    meta<span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token punctuation">{</span> vmid<span class="token punctuation">:</span> <span class="token string">'description'</span><span class="token punctuation">,</span> name<span class="token punctuation">:</span> <span class="token string">'description'</span><span class="token punctuation">,</span> content<span class="token punctuation">:</span> <span class="token string">'About my application'</span> <span class="token punctuation">}</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+</code></pre></div><p>If you want to assign a metaInfo dynamically or by user input you have to define it as a function return:</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token punctuation">{</span>
+  <span class="token comment">// Fetch some data on your API</span>
+  <span class="token keyword">async</span> <span class="token function">asyncData</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token punctuation">{</span>
+      variable<span class="token punctuation">:</span> <span class="token string">'test'</span><span class="token punctuation">,</span>
+    <span class="token punctuation">}</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+
+  <span class="token comment">// Set metas with these infos</span>
+  <span class="token function">metaInfo</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token punctuation">{</span>
+      title<span class="token punctuation">:</span> <span class="token keyword">this</span><span class="token punctuation">.</span>variable<span class="token punctuation">,</span>
+    <span class="token punctuation">}</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+</code></pre></div><p><a href="https://github.com/declandewet/vue-meta" target="_blank" rel="noopener noreferrer">Official docs<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></p> <div class="custom-block tip"><p class="custom-block-title">TIP</p> <p>To use with TypeScript, you will need to setup types definitions, in <code>src/vue-shims.d.ts</code>:</p> <div class="language-ts extra-class"><pre class="language-ts"><code><span class="token keyword">import</span> <span class="token punctuation">{</span> MetaInfo <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'vue-meta'</span><span class="token punctuation">;</span>
+
+<span class="token comment">/**
+ * Vue meta
+ */</span>
+<span class="token keyword">declare</span> <span class="token keyword">module</span> <span class="token string">'vue/types/vue'</span> <span class="token punctuation">{</span>
+  <span class="token keyword">interface</span> <span class="token class-name">Vue</span> <span class="token punctuation">{</span>
+    metaInfo<span class="token operator">?</span><span class="token punctuation">:</span> MetaInfo <span class="token operator">|</span> <span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> MetaInfo<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">declare</span> <span class="token keyword">module</span> <span class="token string">'vue/types/options'</span> <span class="token punctuation">{</span>
+  <span class="token keyword">interface</span> <span class="token class-name">ComponentOptions</span><span class="token operator">&lt;</span><span class="token constant">V</span> <span class="token keyword">extends</span> <span class="token class-name">Vue</span><span class="token operator">&gt;</span> <span class="token punctuation">{</span>
+    metaInfo<span class="token operator">?</span><span class="token punctuation">:</span> MetaInfo <span class="token operator">|</span> <span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> MetaInfo<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div></div> <h2 id="error-handler"><a href="#error-handler" class="header-anchor">#</a> Error handler</h2> <blockquote><p><code>@uvue/core/plugins/errorHandler</code></p></blockquote> <p>This plugin will try to catch errors from UVue plugins. If any error is thrown during a <code>asyncData</code>, <code>fetch</code>,
+<code>onHttpRequest</code> or a middleware call, error handler will stop execution of your page and populate a store.
+Next you can do what you want with this data (catched error) and, for example, display an error page.</p> <p>For example in <code>src/App.vue</code>:</p> <div class="language-html extra-class"><pre class="language-html"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>template</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>app<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>router-view</span> <span class="token attr-name">v-if</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>!$errorHandler.error<span class="token punctuation">&quot;</span></span> <span class="token punctuation">/&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">v-else</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>error-page<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>Oups, something go wrong !<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>template</span><span class="token punctuation">&gt;</span></span>
+</code></pre></div><p>If you write your own UVue plugins, or a custom middleware, you can use a helper function to throw errors:</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token comment">// In a asyncData of a page component</span>
+<span class="token keyword">export</span> <span class="token keyword">const</span> MyComponent <span class="token operator">=</span> <span class="token punctuation">{</span>
+  <span class="token keyword">async</span> <span class="token function">asyncData</span><span class="token punctuation">(</span><span class="token parameter"><span class="token punctuation">{</span> error <span class="token punctuation">}</span></span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token function">error</span><span class="token punctuation">(</span><span class="token string">'Access forbidden'</span><span class="token punctuation">,</span> <span class="token number">403</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+<span class="token comment">// My custom middleware</span>
+<span class="token keyword">export</span> <span class="token keyword">const</span> <span class="token function-variable function">middleware</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token parameter"><span class="token punctuation">{</span> error <span class="token punctuation">}</span></span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+  <span class="token function">error</span><span class="token punctuation">(</span><span class="token string">'Access forbidden'</span><span class="token punctuation">,</span> <span class="token number">403</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+<span class="token comment">// My cutom plugin</span>
+<span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token punctuation">{</span>
+  <span class="token keyword">async</span> <span class="token function">routeResolve</span><span class="token punctuation">(</span><span class="token parameter"><span class="token punctuation">{</span> error <span class="token punctuation">}</span></span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token function">error</span><span class="token punctuation">(</span><span class="token string">'Access forbidden'</span><span class="token punctuation">,</span> <span class="token number">403</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+</code></pre></div><h2 id="spa-paths"><a href="#spa-paths" class="header-anchor">#</a> SPA paths</h2> <p>In some cases you don't need or want SSR for some pages of your application (e.g. administration dashboard, logged pages...)</p> <p>It's possible to disable it with a simple configuration, in <code>server.config.js</code>:</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token punctuation">{</span>
+  spaPaths<span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token string">'/admin'</span><span class="token punctuation">,</span> <span class="token string">'/admin/**/*'</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+</code></pre></div><p>As you can see glob patterns are supported.</p> <h2 id="generate-static-website"><a href="#generate-static-website" class="header-anchor">#</a> Generate static website</h2> <p>You can generate a static website with a simple command:</p> <div class="language-bash extra-class"><pre class="language-bash"><code><span class="token function">npm</span> run ssr:static
+</code></pre></div><p>Default configuration will parse your application routes and generate a HTML file for each.</p> <p>You can configure pre-rendering behavior in <code>server.config.js</code>:</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token punctuation">{</span>
+  <span class="token comment">// Default values</span>
+  <span class="token keyword">static</span><span class="token punctuation">:</span> <span class="token punctuation">{</span>
+    paths<span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+    scanRouter<span class="token punctuation">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+    params<span class="token punctuation">:</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+</code></pre></div><p><strong>Options</strong></p> <ul><li><code>paths</code>: Useful if <code>scanRouter</code> is disabled or a route is not rendered. Fill this
+variable with an array of route paths</li> <li><code>scanRouter</code>: Automatic fetch routes paths from you application router (<code>src/router.js</code>)</li> <li><code>params</code>: Define possibles values for your dynamic routes.
+Example:<div class="language-js extra-class"><pre class="language-js"><code><span class="token punctuation">{</span>
+  path<span class="token punctuation">:</span> <span class="token string">'/:lang/about'</span><span class="token punctuation">,</span>
+  component<span class="token punctuation">:</span> AboutPage<span class="token punctuation">,</span>
+<span class="token punctuation">}</span>
+</code></pre></div>In your config:<div class="language-js extra-class"><pre class="language-js"><code><span class="token punctuation">{</span>
+  params<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+    lang<span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token keyword">null</span><span class="token punctuation">,</span> <span class="token string">'en'</span><span class="token punctuation">,</span> <span class="token string">'fr'</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span>
+</code></pre></div>Will generate these pages :<div class="language- extra-class"><pre class="language-text"><code>/about
+/en/about
+/fr/about
+</code></pre></div></li></ul> <h2 id="use-ssr-non-compatible-libraries"><a href="#use-ssr-non-compatible-libraries" class="header-anchor">#</a> Use SSR non-compatible libraries</h2> <p>You will regulary see some libraries are not SSR compatible. In this case your server
+side will throw an error of type <code>window is unedefined</code>.</p> <p>To avoid these issues you will have some options:</p> <p><strong>A JS library require window on import</strong></p> <p>Use <code>process.client</code> variable only require lib on client side:</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">if</span> <span class="token punctuation">(</span>process<span class="token punctuation">.</span>client<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'some/lib/that/require/window'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre></div><p>Or you can try to load your library in <code>beforeMount()</code> or <code>mounted()</code> in your components
+with a dynamic import:</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token punctuation">{</span>
+  <span class="token function">beforeMount</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">import</span><span class="token punctuation">(</span><span class="token string">'some/lib/that/require/window'</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span><span class="token parameter">module</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+      <span class="token comment">// ...</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+</code></pre></div><p>Finally, you can use <code>imports</code> config in <code>uvue.config.js</code> to only import a script
+on client side:</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token punctuation">{</span>
+  imports<span class="token punctuation">:</span> <span class="token punctuation">[</span>
+    <span class="token comment">// Import your lib automatically</span>
+    <span class="token punctuation">{</span>
+      src<span class="token punctuation">:</span> <span class="token string">'some/lib/that/require/window'</span><span class="token punctuation">,</span>
+      ssr<span class="token punctuation">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token punctuation">]</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+</code></pre></div><p><strong>A Vue component is not SSR compatible</strong></p> <p>Use vue-no-ssr package to not render a component on server side:</p> <div class="language-html extra-class"><pre class="language-html"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>template</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>no-ssr</span><span class="token punctuation">&gt;</span></span> <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>NotCompatibleWithSSR</span> <span class="token punctuation">/&gt;</span></span> <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>no-ssr</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>template</span><span class="token punctuation">&gt;</span></span>
+</code></pre></div><p>Some good articles on it:</p> <ul><li><a href="https://ssr.vuejs.org/guide/universal.html" target="_blank" rel="noopener noreferrer">https://ssr.vuejs.org/guide/universal.html<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li> <li><a href="https://blog.lichter.io/posts/the-guide-to-write-universal-ssr-ready-vue-compon" target="_blank" rel="noopener noreferrer">https://blog.lichter.io/posts/the-guide-to-write-universal-ssr-ready-vue-compon<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li></ul> <h2 id="modern-build"><a href="#modern-build" class="header-anchor">#</a> Modern build</h2> <p>You can use modern mode of Vue CLI 3 to build lighter bundles for modern
+browsers. Just add an argument to <code>ssr:build</code> command:</p> <div class="language-bash extra-class"><pre class="language-bash"><code><span class="token function">npm</span> run ssr:build -- --modern
+</code></pre></div><p>Then you need to add <code>modernBuild</code> plugin to your <code>server.config.js</code> file:</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token punctuation">{</span>
+  plugins<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+    <span class="token punctuation">[</span><span class="token string">'@uvue/server/plugins/modernBuild'</span><span class="token punctuation">]</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+</code></pre></div><p>Purpose of this plugin is to rewrite the final HTML output of your pages to
+include correctly modern bundle and legacy bundle for old browsers.</p></div> <div class="page-edit"><!----> <!----></div> <div class="page-nav"><p class="inner"><span class="prev">
+        ←
+        <a href="/docs/guide/post-install.html" class="prev">
+          Post installation notes
+        </a></span> <span class="next"><a href="/docs/guide/css.html">
+          CSS management
+        </a>
+        →
+      </span></p></div> </div></div><div class="global-ui"></div></div>
+    <script src="/docs/assets/js/app.15f00be4.js" defer></script><script src="/docs/assets/js/4.fc7003b0.js" defer></script><script src="/docs/assets/js/14.7cd195ff.js" defer></script>
+  </body>
+</html>
